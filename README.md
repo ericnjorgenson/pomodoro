@@ -1,6 +1,6 @@
 # Pomodoro Timer
 
-A beautiful, minimalist Pomodoro timer web application with intention setting to help you stay focused and productive.
+A beautiful, minimalist Pomodoro timer web application with intention setting to help you stay focused and productive. Adding some stuff. 
 
 ## Features
 

@@ -94,9 +94,40 @@
             transform-origin: 50% 50%;
         }
 
-        .intention-display {
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
             position: fixed;
             top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 24px;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        nav a.active {
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .intention-display {
+            position: fixed;
+            top: 70px;
             left: 50%;
             transform: translateX(-50%);
             background: rgba(255, 255, 255, 0.15);
@@ -151,6 +182,10 @@
     </style>
 </head>
 <body>
+    <nav>
+        <a href="index.html" class="active">Timer</a>
+        <a href="stats.html">Stats</a>
+    </nav>
     <div class="intention-display" id="intentionDisplay"></div>
     <div class="container">
         <h1>Pomodoro Timer</h1>

@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast Stats Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            padding: 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 24px;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        nav a.active {
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .dashboard-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .dashboard-header h1 {
+            font-size: 2.2rem;
+            font-weight: 300;
+            margin-bottom: 8px;
+        }
+
+        .dashboard-header p {
+            opacity: 0.85;
+            font-size: 1rem;
+        }
+
+        /* Summary row */
+        .summary-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            max-width: 1100px;
+            margin: 0 auto 30px auto;
+        }
+
+        .summary-card {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            transition: transform 0.3s ease;
+        }
+
+        .summary-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .summary-card .label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            opacity: 0.8;
+            margin-bottom: 8px;
+        }
+
+        .summary-card .value {
+            font-size: 2rem;
+            font-weight: 600;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .summary-card .change {
+            font-size: 0.85rem;
+            margin-top: 6px;
+        }
+
+        .change.up { color: #a8ffce; }
+        .change.down { color: #ffb3b3; }
+
+        /* Platform sections */
+        .platforms {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .platform-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 28px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+        }
+
+        .platform-card h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .platform-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .icon-youtube { background: #FF0000; }
+        .icon-apple { background: #A033FF; }
+        .icon-spotify { background: #1DB954; }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-row:last-child {
+            border-bottom: none;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            opacity: 0.85;
+        }
+
+        .stat-value {
+            font-size: 1.1rem;
+            font-weight: 600;
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* Bar chart */
+        .chart-section {
+            max-width: 1100px;
+            margin: 30px auto 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 28px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+        }
+
+        .chart-section h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .chart-tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .chart-tab {
+            padding: 6px 16px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+        }
+
+        .chart-tab:hover, .chart-tab.active {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .bar-chart {
+            display: flex;
+            align-items: flex-end;
+            gap: 8px;
+            height: 200px;
+            padding-top: 10px;
+        }
+
+        .bar-group {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            height: 100%;
+            justify-content: flex-end;
+        }
+
+        .bar {
+            width: 100%;
+            max-width: 50px;
+            border-radius: 6px 6px 0 0;
+            transition: height 0.5s ease;
+            min-height: 4px;
+        }
+
+        .bar.youtube { background: rgba(255, 0, 0, 0.7); }
+        .bar.apple { background: rgba(160, 51, 255, 0.7); }
+        .bar.spotify { background: rgba(29, 185, 84, 0.7); }
+
+        .bar-label {
+            font-size: 0.75rem;
+            opacity: 0.7;
+            text-align: center;
+        }
+
+        /* Top episodes */
+        .episodes-section {
+            max-width: 1100px;
+            margin: 30px auto 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 28px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+        }
+
+        .episodes-section h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .episode-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .episode-item:last-child {
+            border-bottom: none;
+        }
+
+        .episode-rank {
+            font-size: 1.4rem;
+            font-weight: 700;
+            opacity: 0.5;
+            width: 30px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .episode-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .episode-title {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .episode-meta {
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        .episode-plays {
+            font-size: 1.1rem;
+            font-weight: 600;
+            font-variant-numeric: tabular-nums;
+            flex-shrink: 0;
+        }
+
+        /* Last updated */
+        .last-updated {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.85rem;
+            opacity: 0.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+            .summary-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .platforms {
+                grid-template-columns: 1fr;
+            }
+            .bar-chart {
+                height: 150px;
+            }
+            .dashboard-header h1 {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 440px) {
+            .summary-row {
+                grid-template-columns: 1fr;
+            }
+            body {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Timer</a>
+        <a href="stats.html" class="active">Stats</a>
+    </nav>
+
+    <div class="dashboard-header">
+        <h1>Podcast Stats Dashboard</h1>
+        <p>Performance across YouTube, Apple Podcasts, and Spotify</p>
+    </div>
+
+    <!-- Summary cards -->
+    <div class="summary-row" id="summaryRow">
+        <div class="summary-card">
+            <div class="label">Total Audience</div>
+            <div class="value" id="totalAudience">--</div>
+            <div class="change up" id="totalAudienceChange"></div>
+        </div>
+        <div class="summary-card">
+            <div class="label">Monthly Plays</div>
+            <div class="value" id="monthlyPlays">--</div>
+            <div class="change up" id="monthlyPlaysChange"></div>
+        </div>
+        <div class="summary-card">
+            <div class="label">Total Episodes</div>
+            <div class="value" id="totalEpisodes">--</div>
+            <div class="change" id="totalEpisodesChange"></div>
+        </div>
+        <div class="summary-card">
+            <div class="label">Avg. Rating</div>
+            <div class="value" id="avgRating">--</div>
+            <div class="change" id="avgRatingChange"></div>
+        </div>
+    </div>
+
+    <!-- Platform cards -->
+    <div class="platforms">
+        <!-- YouTube -->
+        <div class="platform-card">
+            <h2><span class="platform-icon icon-youtube">YT</span> YouTube</h2>
+            <div id="youtubeStats"></div>
+        </div>
+        <!-- Apple Podcasts -->
+        <div class="platform-card">
+            <h2><span class="platform-icon icon-apple">AP</span> Apple Podcasts</h2>
+            <div id="appleStats"></div>
+        </div>
+        <!-- Spotify -->
+        <div class="platform-card">
+            <h2><span class="platform-icon icon-spotify">SP</span> Spotify</h2>
+            <div id="spotifyStats"></div>
+        </div>
+    </div>
+
+    <!-- Monthly chart -->
+    <div class="chart-section">
+        <h2>Monthly Downloads / Views</h2>
+        <div class="chart-tabs">
+            <span class="chart-tab active" data-range="6">6 Months</span>
+            <span class="chart-tab" data-range="12">12 Months</span>
+        </div>
+        <div class="bar-chart" id="barChart"></div>
+    </div>
+
+    <!-- Top episodes -->
+    <div class="episodes-section">
+        <h2>Top Episodes (All Platforms)</h2>
+        <div id="topEpisodes"></div>
+    </div>
+
+    <div class="last-updated" id="lastUpdated"></div>
+
+    <script>
+        // ============================================================
+        // DEMO DATA — Replace with real API responses
+        // ============================================================
+        // To connect real data:
+        //   1. YouTube: Use YouTube Data API v3 (channels.list, videos.list)
+        //   2. Apple:   Use Apple Podcasts Connect API or a scraper
+        //   3. Spotify: Use Spotify for Podcasters API
+        // ============================================================
+
+        const data = {
+            updatedAt: '2026-04-10T08:00:00Z',
+
+            summary: {
+                totalAudience:      { value: 48720,  change: +8.3  },
+                monthlyPlays:       { value: 12450,  change: +12.1 },
+                totalEpisodes:      { value: 156,    change: null   },
+                avgRating:          { value: 4.8,    change: +0.1  },
+            },
+
+            youtube: {
+                subscribers:     '18,200',
+                totalViews:      '1,245,000',
+                avgViewDuration: '12m 34s',
+                last30Views:     '82,400',
+                likes:           '6,320',
+                comments:        '1,140',
+            },
+
+            apple: {
+                followers:       '14,500',
+                rating:          '4.8 / 5',
+                reviews:         '1,284',
+                last30Plays:     '45,200',
+                topCountry:      'United States',
+                avgCompletion:   '72%',
+            },
+
+            spotify: {
+                followers:       '16,020',
+                last30Streams:   '38,600',
+                avgListenTime:   '18m 12s',
+                starts:          '52,100',
+                saves:           '4,350',
+                topMarket:       'United States',
+            },
+
+            // Monthly data: [youtube, apple, spotify]
+            monthly: [
+                { month: 'Nov',  youtube: 6200,  apple: 3200, spotify: 2800 },
+                { month: 'Dec',  youtube: 7100,  apple: 3500, spotify: 3100 },
+                { month: 'Jan',  youtube: 7800,  apple: 3900, spotify: 3400 },
+                { month: 'Feb',  youtube: 8200,  apple: 4100, spotify: 3600 },
+                { month: 'Mar',  youtube: 9500,  apple: 4600, spotify: 3900 },
+                { month: 'Apr',  youtube: 8100,  apple: 4200, spotify: 3500 },
+                { month: 'May',  youtube: 9200,  apple: 4500, spotify: 3800 },
+                { month: 'Jun',  youtube: 10100, apple: 4900, spotify: 4200 },
+                { month: 'Jul',  youtube: 9800,  apple: 4700, spotify: 4000 },
+                { month: 'Aug',  youtube: 10500, apple: 5100, spotify: 4400 },
+                { month: 'Sep',  youtube: 11200, apple: 5400, spotify: 4700 },
+                { month: 'Oct',  youtube: 12450, apple: 5800, spotify: 5100 },
+            ],
+
+            topEpisodes: [
+                { title: 'How to Build a Second Brain',          date: 'Oct 2',  plays: '34,200' },
+                { title: 'The Future of Remote Work',            date: 'Sep 18', plays: '28,400' },
+                { title: 'Deep Work in the Age of Distraction',  date: 'Aug 25', plays: '26,100' },
+                { title: 'Lessons from 10 Years of Podcasting',  date: 'Oct 9',  plays: '22,800' },
+                { title: 'Naval Ravikant on Wealth and Happiness', date: 'Jul 14', plays: '21,500' },
+            ],
+        };
+
+        // ============================================================
+        // Render helpers
+        // ============================================================
+
+        function formatNumber(n) {
+            if (n >= 1_000_000) return (n / 1_000_000).toFixed(1) + 'M';
+            if (n >= 1_000) return (n / 1_000).toFixed(1) + 'K';
+            return n.toString();
+        }
+
+        function renderSummary() {
+            const s = data.summary;
+
+            document.getElementById('totalAudience').textContent = formatNumber(s.totalAudience.value);
+            document.getElementById('monthlyPlays').textContent = formatNumber(s.monthlyPlays.value);
+            document.getElementById('totalEpisodes').textContent = s.totalEpisodes.value;
+            document.getElementById('avgRating').textContent = s.avgRating.value;
+
+            setChange('totalAudienceChange', s.totalAudience.change);
+            setChange('monthlyPlaysChange', s.monthlyPlays.change);
+            setChange('totalEpisodesChange', s.totalEpisodes.change);
+            setChange('avgRatingChange', s.avgRating.change);
+        }
+
+        function setChange(id, change) {
+            const el = document.getElementById(id);
+            if (change === null || change === undefined) {
+                el.textContent = '';
+                return;
+            }
+            const sign = change >= 0 ? '+' : '';
+            el.textContent = sign + change + '% vs last month';
+            el.className = 'change ' + (change >= 0 ? 'up' : 'down');
+        }
+
+        function renderPlatformStats(containerId, stats) {
+            const container = document.getElementById(containerId);
+            const labels = {
+                subscribers: 'Subscribers', totalViews: 'Total Views',
+                avgViewDuration: 'Avg. View Duration', last30Views: 'Views (30d)',
+                likes: 'Likes', comments: 'Comments',
+                followers: 'Followers', rating: 'Rating', reviews: 'Reviews',
+                last30Plays: 'Plays (30d)', topCountry: 'Top Country',
+                avgCompletion: 'Avg. Completion',
+                last30Streams: 'Streams (30d)', avgListenTime: 'Avg. Listen Time',
+                starts: 'Starts', saves: 'Saves', topMarket: 'Top Market',
+            };
+            container.innerHTML = Object.entries(stats).map(([key, val]) => `
+                <div class="stat-row">
+                    <span class="stat-label">${labels[key] || key}</span>
+                    <span class="stat-value">${val}</span>
+                </div>
+            `).join('');
+        }
+
+        function renderBarChart(months) {
+            const chart = document.getElementById('barChart');
+            const maxVal = Math.max(...months.flatMap(m => [m.youtube, m.apple, m.spotify]));
+
+            chart.innerHTML = months.map(m => {
+                const ytH = (m.youtube / maxVal * 100).toFixed(1);
+                const apH = (m.apple / maxVal * 100).toFixed(1);
+                const spH = (m.spotify / maxVal * 100).toFixed(1);
+                return `
+                    <div class="bar-group">
+                        <div class="bar youtube" style="height:${ytH}%" title="YouTube: ${m.youtube.toLocaleString()}"></div>
+                        <div class="bar apple"   style="height:${apH}%" title="Apple: ${m.apple.toLocaleString()}"></div>
+                        <div class="bar spotify"  style="height:${spH}%" title="Spotify: ${m.spotify.toLocaleString()}"></div>
+                        <span class="bar-label">${m.month}</span>
+                    </div>`;
+            }).join('');
+        }
+
+        function renderTopEpisodes() {
+            const container = document.getElementById('topEpisodes');
+            container.innerHTML = data.topEpisodes.map((ep, i) => `
+                <div class="episode-item">
+                    <span class="episode-rank">${i + 1}</span>
+                    <div class="episode-info">
+                        <div class="episode-title">${ep.title}</div>
+                        <div class="episode-meta">${ep.date}</div>
+                    </div>
+                    <span class="episode-plays">${ep.plays}</span>
+                </div>
+            `).join('');
+        }
+
+        // ============================================================
+        // Chart tab switching
+        // ============================================================
+
+        document.querySelectorAll('.chart-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.chart-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                const range = parseInt(tab.dataset.range, 10);
+                renderBarChart(data.monthly.slice(-range));
+            });
+        });
+
+        // ============================================================
+        // Initial render
+        // ============================================================
+
+        renderSummary();
+        renderPlatformStats('youtubeStats', data.youtube);
+        renderPlatformStats('appleStats', data.apple);
+        renderPlatformStats('spotifyStats', data.spotify);
+        renderBarChart(data.monthly.slice(-6));
+        renderTopEpisodes();
+
+        document.getElementById('lastUpdated').textContent =
+            'Last updated: ' + new Date(data.updatedAt).toLocaleString();
+    </script>
+</body>
+</html>

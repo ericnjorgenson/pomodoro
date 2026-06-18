@@ -86,11 +86,94 @@ def clean(text):
     return text
 
 
+# The blog tags only ~12% of posts and uses no real WordPress categories, so we
+# derive a topic for every post from its title, tags, and excerpt. Categories are
+# checked by weighted keyword scoring (tags weigh most, then title, then excerpt).
+# Order here is also the tie-break priority (earlier = higher priority).
+CATEGORIES = [
+    ("Space & Spaceflight", [
+        "space", "spacex", "nasa", "rocket", "launch", "orbit", "orbital",
+        "satellite", "starship", "falcon", "lunar", "moon", "sls", "orion",
+        "spaceflight", "propulsion", "reentry", "re-entry", "payload", "mass driver",
+        "astronaut", "spacecraft", "rover", "telescope", "asteroid", "interstellar",
+        "cislunar", "launch vehicle", "heavy lift",
+    ]),
+    ("Mars & Terraforming", [
+        "mars", "martian", "terraform", "terraforming",
+    ]),
+    ("Energy & Climate", [
+        "energy", "solar", "renewable", "climate", "hydrogen", "synthetic fuel",
+        "electricity", "grid", "battery", "power plant", "decarbon", "carbon",
+        "methane", "natural gas", "wind power", "nuclear", "geothermal", "fuel",
+        "emissions", "electrolysis", "photovoltaic", "data center", "kardashev",
+        "sustainability", "wildfire", "water",
+    ]),
+    ("AI & Software", [
+        "ai", "artificial intelligence", "machine-learning", "machine learning",
+        "software", "programming", "python", "algorithm", "neural", "gpt", "llm",
+        "computer", "code", "coding", "deep learning", "automation", "robot",
+    ]),
+    ("Economics, Policy & Society", [
+        "economics", "economy", "economic", "policy", "politics", "political", "tax",
+        "taxation", "immigration", "finance", "inflation", "regulation", "housing",
+        "government", "defense", "defence", "war", "geopolitics", "dynamism",
+        "productivity", "law", "leadership", "history", "manufacturing", "industry",
+        "trade", "capitalism", "abundance",
+    ]),
+    ("Physics & Science", [
+        "physics", "quantum", "relativity", "astronomy", "astrophysics", "math",
+        "mathematics", "exoplanet", "exoplanets", "theory", "cosmology", "science",
+        "experiment", "thermodynamics", "engineering",
+    ]),
+    ("Startups & Building", [
+        "startup", "founder", "company", "factory", "hardware", "production",
+        "terraform industries", "business", "venture", "team", "hiring", "scaling",
+    ]),
+    ("Travel & Photography", [
+        "travel", "photo", "photos", "photograph", "photography", "trip", "mongolia",
+        "tasmania", "hike", "hiking", "mountain", "glacier", "road", "journey",
+        "border", "russia", "russian", "city", "salton-sea", "nature", "camping",
+    ]),
+    ("Books & Writing", [
+        "book", "books", "writing", "review", "fiction", "novel", "essay",
+        "science-fiction", "reading", "author",
+    ]),
+]
+
+
+def classify_post(post):
+    """Assign a single primary topic by weighted keyword scoring."""
+    title = clean(post.get("title")).lower()
+    excerpt = clean(post.get("excerpt")).lower()
+    tags = " ".join(tag_names(post)).lower().replace("-", " ")
+    title_words = title.replace("-", " ")
+
+    scores = {}
+    for name, keywords in CATEGORIES:
+        score = 0
+        for kw in keywords:
+            k = kw.replace("-", " ")
+            if k in tags:
+                score += 3
+            if k in title_words:
+                score += 2
+            if k in excerpt:
+                score += 1
+        if score:
+            scores[name] = score
+
+    if not scores:
+        return "Personal & Miscellaneous"
+    best = max(scores.values())
+    # tie-break by CATEGORIES priority order
+    for name, _ in CATEGORIES:
+        if scores.get(name) == best:
+            return name
+    return "Personal & Miscellaneous"
+
+
 def cat_names(post):
-    cats = post.get("categories") or {}
-    names = [c.get("name", "") for c in cats.values()]
-    names = [n for n in names if n and n.lower() != "uncategorized"]
-    return sorted(names) or ["Uncategorized"]
+    return [classify_post(post)]
 
 
 def tag_names(post):

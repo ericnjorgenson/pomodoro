@@ -1,0 +1,42 @@
+name: Scrape Casey Handmer Blog
+
+# Runs the scraper on a GitHub-hosted runner (open internet access) and
+# commits the generated archive back to the branch. Triggered manually.
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - claude/casey-handmer-blog-scrape-76jf2r
+    paths:
+      - scripts/scrape_casey_handmer.py
+      - .github/workflows/scrape-blog.yml
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run scraper
+        run: python scripts/scrape_casey_handmer.py
+
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add casey-handmer-blog.md
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Add scraped Casey Handmer blog archive (chronological, categorized)"
+            git push
+          fi

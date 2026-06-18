@@ -26,6 +26,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Install dependencies
+        run: pip install html2text
+
       - name: Run scraper
         run: python scripts/scrape_casey_handmer.py
 

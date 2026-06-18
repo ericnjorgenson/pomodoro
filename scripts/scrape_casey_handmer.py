@@ -10,7 +10,7 @@ Output: casey-handmer-blog.md
   - Metadata header (post count, date range)
   - Category index with counts
   - Full chronological index of every post (oldest -> newest)
-  - Posts grouped by category, chronological, with excerpts
+  - Posts grouped by category, chronological, with full post bodies
 """
 
 import json
@@ -19,6 +19,11 @@ import sys
 import time
 import urllib.request
 import urllib.error
+
+try:
+    import html2text as _html2text
+except ImportError:  # pragma: no cover - converter is optional but expected in CI
+    _html2text = None
 from collections import defaultdict
 from datetime import datetime, timezone
 from html import unescape
@@ -27,7 +32,7 @@ SITE = "caseyhandmer.wordpress.com"
 API = f"https://public-api.wordpress.com/rest/v1.1/sites/{SITE}/posts/"
 OUT = "casey-handmer-blog.md"
 PER_PAGE = 100
-FIELDS = "ID,date,modified,title,URL,short_URL,excerpt,categories,tags,slug,word_count,author"
+FIELDS = "ID,date,modified,title,URL,short_URL,excerpt,content,categories,tags,slug,word_count,author"
 
 UA = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 "
@@ -172,6 +177,40 @@ def classify_post(post):
     return "Personal & Miscellaneous"
 
 
+def _make_converter():
+    if _html2text is None:
+        return None
+    h = _html2text.HTML2Text()
+    h.body_width = 0          # don't hard-wrap paragraphs
+    h.ignore_images = False   # keep image references
+    h.ignore_links = False    # keep hyperlinks
+    h.ignore_emphasis = False
+    h.protect_links = True
+    h.unicode_snob = True
+    h.single_line_break = False
+    return h
+
+
+_CONVERTER = _make_converter()
+_BLANKS_RE = re.compile(r"\n{3,}")
+
+
+def body_markdown(post):
+    """Convert a post's HTML content to clean Markdown, demoting headings so
+    they nest under the per-post #### heading used in the document."""
+    html = post.get("content") or ""
+    if not html.strip():
+        return ""
+    if _CONVERTER is not None:
+        md = _CONVERTER.handle(html)
+    else:  # fallback: strip tags
+        md = clean(html)
+    # Demote any in-body headings (#, ##, ...) so they sit below the post's ####.
+    md = re.sub(r"(?m)^(#{1,6})\s", lambda m: "#" * min(len(m.group(1)) + 4, 6) + " ", md)
+    md = _BLANKS_RE.sub("\n\n", md).strip()
+    return md
+
+
 def cat_names(post):
     return [classify_post(post)]
 
@@ -250,18 +289,25 @@ def main():
             title = clean(p.get("title")) or "(untitled)"
             url = p.get("URL", "")
             date = fmt_date(p.get("date", ""))
-            lines.append(f"#### {date} — [{title}]({url})")
+            lines.append(f"#### {date} — {title}")
+            meta = [f"[Original post]({url})"]
             tags = tag_names(p)
             if tags:
-                lines.append(f"_Tags: {', '.join(tags)}_")
+                meta.append(f"Tags: {', '.join(tags)}")
             wc = p.get("word_count")
-            excerpt = clean(p.get("excerpt"))
-            if excerpt:
-                lines.append("")
-                lines.append(f"> {excerpt}")
             if wc:
-                lines.append("")
-                lines.append(f"_~{wc} words_")
+                meta.append(f"~{wc} words")
+            lines.append("_" + " · ".join(meta) + "_")
+            lines.append("")
+            body = body_markdown(p)
+            if body:
+                lines.append(body)
+            else:
+                excerpt = clean(p.get("excerpt"))
+                if excerpt:
+                    lines.append(f"> {excerpt}")
+            lines.append("")
+            lines.append("<br>")
             lines.append("")
         lines.append("---\n")
 

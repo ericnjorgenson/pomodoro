@@ -1,0 +1,23 @@
+{
+  "totalEpisodes": 156,
+
+  "apple": {
+    "followers": 0,
+    "rating": 0,
+    "reviews": 0,
+    "downloads30d": 0,
+    "avgCompletion": "--",
+    "topCountry": "--"
+  },
+
+  "spotify": {
+    "followers": 0,
+    "streams30d": 0,
+    "avgListenTime": "--",
+    "starts30d": 0,
+    "saves": 0,
+    "topMarket": "--"
+  },
+
+  "topEpisodes": []
+}

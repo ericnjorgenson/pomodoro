@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast Stats Dashboard</title>
+    <style>
+        :root {
+            --bg: #0E0F13;
+            --surface: #17181F;
+            --border: rgba(255,255,255,0.07);
+            --text-1: #E4E5EA;
+            --text-2: #9395A1;
+            --text-3: #5C5E6A;
+            --yt: #E8403A;
+            --apple: #9B5DE5;
+            --spotify: #1DB954;
+            --positive: #34D399;
+            --negative: #FB7185;
+            --radius: 10px;
+        }
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg: #F3F4F6; --surface: #FFFFFF;
+                --border: rgba(0,0,0,0.07);
+                --text-1: #111827; --text-2: #6B7280; --text-3: #9CA3AF;
+            }
+        }
+        :root[data-theme="light"] {
+            --bg: #F3F4F6; --surface: #FFFFFF;
+            --border: rgba(0,0,0,0.07);
+            --text-1: #111827; --text-2: #6B7280; --text-3: #9CA3AF;
+        }
+        :root[data-theme="dark"] {
+            --bg: #0E0F13; --surface: #17181F;
+            --border: rgba(255,255,255,0.07);
+            --text-1: #E4E5EA; --text-2: #9395A1; --text-3: #5C5E6A;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--text-1);
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 36px 20px 60px;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        header { margin-bottom: 28px; }
+        header h1 { font-size: 1.5rem; font-weight: 600; margin-bottom: 2px; }
+        header p { color: var(--text-3); font-size: 0.85rem; }
+
+        .kpis {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        .kpi {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px;
+        }
+        .kpi-label {
+            display: block;
+            font-size: 0.68rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.09em;
+            color: var(--text-3);
+            margin-bottom: 8px;
+        }
+        .kpi-value {
+            display: block;
+            font-size: 1.75rem;
+            font-weight: 700;
+            font-variant-numeric: tabular-nums;
+            line-height: 1.1;
+        }
+        .kpi-delta {
+            display: inline-block;
+            font-size: 0.78rem;
+            font-weight: 500;
+            margin-top: 6px;
+            font-variant-numeric: tabular-nums;
+        }
+        .kpi-delta.up { color: var(--positive); }
+        .kpi-delta.down { color: var(--negative); }
+
+        .platforms {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        .platform {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px;
+            border-left: 3px solid var(--text-3);
+        }
+        .platform.yt { border-left-color: var(--yt); }
+        .platform.ap { border-left-color: var(--apple); }
+        .platform.sp { border-left-color: var(--spotify); }
+
+        .platform-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 14px;
+        }
+        .platform-dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .yt .platform-dot { background: var(--yt); }
+        .ap .platform-dot { background: var(--apple); }
+        .sp .platform-dot { background: var(--spotify); }
+        .platform-name { font-size: 0.95rem; font-weight: 600; }
+
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 7px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .metric:last-child { border-bottom: none; }
+        .metric-label { font-size: 0.84rem; color: var(--text-2); }
+        .metric-value {
+            font-size: 0.92rem;
+            font-weight: 600;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .bottom-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 12px;
+        }
+        .panel {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px;
+        }
+        .panel-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 14px;
+        }
+        .panel-title { font-size: 0.92rem; font-weight: 600; }
+
+        .chart-tabs { display: flex; gap: 4px; }
+        .chart-tab {
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.72rem;
+            font-weight: 500;
+            color: var(--text-3);
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-family: inherit;
+            transition: all 0.15s;
+        }
+        .chart-tab:hover { color: var(--text-2); }
+        .chart-tab.active { background: var(--border); color: var(--text-1); }
+
+        .chart-wrap {
+            position: relative;
+            width: 100%;
+            height: 210px;
+        }
+        .chart-wrap canvas { width: 100%; height: 100%; display: block; }
+
+        .chart-legend {
+            display: flex;
+            gap: 16px;
+            margin-top: 12px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.72rem;
+            color: var(--text-2);
+        }
+        .legend-swatch { width: 10px; height: 3px; border-radius: 1px; }
+
+        .episode {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 9px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .episode:last-child { border-bottom: none; }
+        .episode-rank {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--text-3);
+            width: 18px;
+            text-align: right;
+            flex-shrink: 0;
+            font-variant-numeric: tabular-nums;
+        }
+        .episode-info { flex: 1; min-width: 0; }
+        .episode-title {
+            font-size: 0.84rem;
+            font-weight: 500;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .episode-date { font-size: 0.72rem; color: var(--text-3); margin-top: 1px; }
+        .episode-plays {
+            font-size: 0.84rem;
+            font-weight: 600;
+            font-variant-numeric: tabular-nums;
+            flex-shrink: 0;
+            color: var(--text-2);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-3);
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+        .empty-state code {
+            background: var(--border);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.82rem;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 28px;
+            font-size: 0.72rem;
+            color: var(--text-3);
+        }
+
+        @media (max-width: 900px) {
+            .platforms { grid-template-columns: 1fr 1fr; }
+            .bottom-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 640px) {
+            .kpis { grid-template-columns: 1fr 1fr; }
+            .platforms { grid-template-columns: 1fr; }
+            body { padding: 20px 14px 40px; }
+        }
+        @media (max-width: 400px) {
+            .kpi-value { font-size: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Podcast Dashboard</h1>
+        <p>Performance across YouTube, Apple Podcasts, and Spotify</p>
+    </header>
+
+    <section class="kpis">
+        <div class="kpi">
+            <span class="kpi-label">Total Followers</span>
+            <span class="kpi-value" id="kv-followers">--</span>
+            <span class="kpi-delta" id="kd-followers"></span>
+        </div>
+        <div class="kpi">
+            <span class="kpi-label">Monthly Downloads</span>
+            <span class="kpi-value" id="kv-downloads">--</span>
+            <span class="kpi-delta" id="kd-downloads"></span>
+        </div>
+        <div class="kpi">
+            <span class="kpi-label">Episodes Published</span>
+            <span class="kpi-value" id="kv-episodes">--</span>
+            <span class="kpi-delta" id="kd-episodes"></span>
+        </div>
+        <div class="kpi">
+            <span class="kpi-label">Avg. Rating</span>
+            <span class="kpi-value" id="kv-rating">--</span>
+            <span class="kpi-delta" id="kd-rating"></span>
+        </div>
+    </section>
+
+    <section class="platforms">
+        <div class="platform yt">
+            <div class="platform-header">
+                <span class="platform-dot"></span>
+                <span class="platform-name">YouTube</span>
+            </div>
+            <div id="yt-metrics"></div>
+        </div>
+        <div class="platform ap">
+            <div class="platform-header">
+                <span class="platform-dot"></span>
+                <span class="platform-name">Apple Podcasts</span>
+            </div>
+            <div id="ap-metrics"></div>
+        </div>
+        <div class="platform sp">
+            <div class="platform-header">
+                <span class="platform-dot"></span>
+                <span class="platform-name">Spotify</span>
+            </div>
+            <div id="sp-metrics"></div>
+        </div>
+    </section>
+
+    <section class="bottom-grid">
+        <div class="panel">
+            <div class="panel-header">
+                <span class="panel-title">Monthly Trend</span>
+                <div class="chart-tabs">
+                    <button class="chart-tab active" data-range="6">6M</button>
+                    <button class="chart-tab" data-range="12">12M</button>
+                </div>
+            </div>
+            <div class="chart-wrap"><canvas id="trendCanvas"></canvas></div>
+            <div class="chart-legend">
+                <span class="legend-item"><span class="legend-swatch" style="background:var(--yt)"></span>YouTube</span>
+                <span class="legend-item"><span class="legend-swatch" style="background:var(--apple)"></span>Apple</span>
+                <span class="legend-item"><span class="legend-swatch" style="background:var(--spotify)"></span>Spotify</span>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="panel-header">
+                <span class="panel-title">Top Episodes</span>
+            </div>
+            <div id="top-episodes"></div>
+        </div>
+    </section>
+
+    <div class="footer" id="footer"></div>
+
+    <script>
+        let DATA = null;
+        let activeRange = 6;
+
+        function fmt(n) {
+            if (n >= 1e6) return (n / 1e6).toFixed(1) + 'M';
+            if (n >= 1e3) return (n / 1e3).toFixed(1) + 'K';
+            return String(n);
+        }
+
+        function renderKPIs() {
+            const k = DATA.kpis;
+            document.getElementById('kv-followers').textContent = fmt(k.followers.value);
+            document.getElementById('kv-downloads').textContent = fmt(k.downloads.value);
+            document.getElementById('kv-episodes').textContent = k.episodes.value || '--';
+            document.getElementById('kv-rating').textContent = k.rating.value || '--';
+
+            for (const [key, obj] of Object.entries(k)) {
+                const el = document.getElementById('kd-' + key);
+                if (!obj.delta) { el.textContent = ''; continue; }
+                const sign = obj.delta >= 0 ? '+' : '';
+                el.textContent = sign + obj.delta + '% vs. prior month';
+                el.className = 'kpi-delta ' + (obj.delta >= 0 ? 'up' : 'down');
+            }
+        }
+
+        function renderMetrics(id, rows) {
+            const el = document.getElementById(id);
+            if (!rows || !rows.length) {
+                el.innerHTML = '<div class="empty-state">No data yet</div>';
+                return;
+            }
+            el.innerHTML = rows.map(([label, value]) =>
+                `<div class="metric"><span class="metric-label">${label}</span><span class="metric-value">${value}</span></div>`
+            ).join('');
+        }
+
+        function renderEpisodes() {
+            const el = document.getElementById('top-episodes');
+            if (!DATA.topEpisodes?.length) {
+                el.innerHTML = '<div class="empty-state">No episodes yet</div>';
+                return;
+            }
+            el.innerHTML = DATA.topEpisodes.map((ep, i) =>
+                `<div class="episode">
+                    <span class="episode-rank">${i + 1}</span>
+                    <div class="episode-info">
+                        <div class="episode-title">${ep.title}</div>
+                        <div class="episode-date">${ep.date}</div>
+                    </div>
+                    <span class="episode-plays">${ep.plays}</span>
+                </div>`
+            ).join('');
+        }
+
+        function drawChart() {
+            const months = (DATA.monthly || []).slice(-activeRange);
+            const canvas = document.getElementById('trendCanvas');
+            const ctx = canvas.getContext('2d');
+            const dpr = window.devicePixelRatio || 1;
+            const rect = canvas.getBoundingClientRect();
+
+            canvas.width = rect.width * dpr;
+            canvas.height = rect.height * dpr;
+            ctx.scale(dpr, dpr);
+
+            const w = rect.width, h = rect.height;
+            const pad = { t: 12, r: 12, b: 26, l: 38 };
+            const pw = w - pad.l - pad.r;
+            const ph = h - pad.t - pad.b;
+
+            ctx.clearRect(0, 0, w, h);
+
+            if (!months.length) {
+                ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--text-3').trim();
+                ctx.font = '13px -apple-system, system-ui, sans-serif';
+                ctx.textAlign = 'center';
+                ctx.fillText('Chart data builds as stats are collected', w / 2, h / 2);
+                return;
+            }
+
+            const cs = getComputedStyle(document.documentElement);
+            const col = {
+                yt: cs.getPropertyValue('--yt').trim(),
+                ap: cs.getPropertyValue('--apple').trim(),
+                sp: cs.getPropertyValue('--spotify').trim(),
+                grid: cs.getPropertyValue('--text-3').trim(),
+            };
+
+            const allVals = months.flatMap(m => [m.yt || 0, m.ap || 0, m.sp || 0]);
+            const maxVal = Math.ceil(Math.max(...allVals, 100) / 2000) * 2000;
+            const gridN = 4;
+
+            for (let i = 0; i <= gridN; i++) {
+                const y = pad.t + (ph / gridN) * i;
+                ctx.beginPath();
+                ctx.moveTo(pad.l, y);
+                ctx.lineTo(w - pad.r, y);
+                ctx.strokeStyle = col.grid;
+                ctx.globalAlpha = 0.12;
+                ctx.lineWidth = 1;
+                ctx.stroke();
+                ctx.globalAlpha = 1;
+            }
+
+            ctx.fillStyle = col.grid;
+            ctx.globalAlpha = 0.55;
+            ctx.font = '10px -apple-system, system-ui, sans-serif';
+            ctx.textAlign = 'right';
+            ctx.textBaseline = 'middle';
+            for (let i = 0; i <= gridN; i++) {
+                const y = pad.t + (ph / gridN) * i;
+                const v = maxVal - (maxVal / gridN) * i;
+                ctx.fillText(v >= 1000 ? (v / 1000) + 'K' : v, pad.l - 6, y);
+            }
+            ctx.globalAlpha = 1;
+
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'top';
+            ctx.globalAlpha = 0.55;
+            const step = months.length > 1 ? pw / (months.length - 1) : 0;
+            months.forEach((m, i) => {
+                ctx.fillText(m.month, pad.l + step * i, h - pad.b + 8);
+            });
+            ctx.globalAlpha = 1;
+
+            function pt(i, v) {
+                return { x: pad.l + step * i, y: pad.t + ph - (v / maxVal) * ph };
+            }
+
+            function series(key, color) {
+                const pts = months.map((m, i) => pt(i, m[key] || 0));
+                if (pts.length < 2) return;
+
+                ctx.beginPath();
+                ctx.moveTo(pts[0].x, pad.t + ph);
+                ctx.lineTo(pts[0].x, pts[0].y);
+                for (let i = 1; i < pts.length; i++) {
+                    const cpx = (pts[i - 1].x + pts[i].x) / 2;
+                    ctx.bezierCurveTo(cpx, pts[i - 1].y, cpx, pts[i].y, pts[i].x, pts[i].y);
+                }
+                ctx.lineTo(pts[pts.length - 1].x, pad.t + ph);
+                ctx.closePath();
+                ctx.fillStyle = color;
+                ctx.globalAlpha = 0.07;
+                ctx.fill();
+                ctx.globalAlpha = 1;
+
+                ctx.beginPath();
+                ctx.moveTo(pts[0].x, pts[0].y);
+                for (let i = 1; i < pts.length; i++) {
+                    const cpx = (pts[i - 1].x + pts[i].x) / 2;
+                    ctx.bezierCurveTo(cpx, pts[i - 1].y, cpx, pts[i].y, pts[i].x, pts[i].y);
+                }
+                ctx.strokeStyle = color;
+                ctx.lineWidth = 2;
+                ctx.stroke();
+
+                pts.forEach(p => {
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, 2.5, 0, Math.PI * 2);
+                    ctx.fillStyle = color;
+                    ctx.globalAlpha = 0.9;
+                    ctx.fill();
+                    ctx.globalAlpha = 1;
+                });
+            }
+
+            series('sp', col.sp);
+            series('ap', col.ap);
+            series('yt', col.yt);
+        }
+
+        document.querySelectorAll('.chart-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.chart-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                activeRange = parseInt(tab.dataset.range, 10);
+                drawChart();
+            });
+        });
+
+        window.addEventListener('resize', drawChart);
+        new MutationObserver(drawChart).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', drawChart);
+
+        function render() {
+            renderKPIs();
+            renderMetrics('yt-metrics', DATA.youtube);
+            renderMetrics('ap-metrics', DATA.apple);
+            renderMetrics('sp-metrics', DATA.spotify);
+            renderEpisodes();
+            document.getElementById('footer').textContent =
+                'Last updated ' + new Date(DATA.updatedAt).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+            requestAnimationFrame(drawChart);
+        }
+
+        fetch('data.json')
+            .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+            .then(d => { DATA = d; render(); })
+            .catch(() => {
+                document.querySelector('.kpis').outerHTML = '';
+                document.querySelector('.platforms').outerHTML = '';
+                document.querySelector('.bottom-grid').outerHTML = `
+                    <div class="panel empty-state" style="max-width:600px;margin:40px auto;">
+                        <p style="font-size:1.1rem;color:var(--text-1);margin-bottom:16px;">No stats data yet</p>
+                        <p>To get started:</p>
+                        <p>1. Add your YouTube API key and channel ID as GitHub secrets:<br>
+                           <code>YOUTUBE_API_KEY</code> and <code>YOUTUBE_CHANNEL_ID</code></p>
+                        <p>2. Update <code>manual-stats.json</code> with your Apple and Spotify numbers</p>
+                        <p>3. Run the GitHub Action or execute:<br>
+                           <code>node scripts/fetch-stats.js</code></p>
+                    </div>`;
+            });
+    </script>
+</body>
+</html>

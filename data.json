@@ -1,0 +1,130 @@
+{
+  "updatedAt": "2026-08-18T14:06:01.269Z",
+  "kpis": {
+    "followers": {
+      "value": 7110
+    },
+    "downloads": {
+      "value": 169
+    },
+    "episodes": {
+      "value": 156
+    },
+    "rating": {
+      "value": 0
+    }
+  },
+  "youtube": [
+    [
+      "Subscribers",
+      "7,110"
+    ],
+    [
+      "Total views",
+      "292,023"
+    ],
+    [
+      "Views (30d)",
+      "169"
+    ],
+    [
+      "Avg. duration",
+      "0:27"
+    ],
+    [
+      "Likes (30d)",
+      "4"
+    ],
+    [
+      "Comments (30d)",
+      "0"
+    ]
+  ],
+  "apple": [
+    [
+      "Followers",
+      "0"
+    ],
+    [
+      "Rating",
+      "--"
+    ],
+    [
+      "Written reviews",
+      "0"
+    ],
+    [
+      "Downloads (30d)",
+      "0"
+    ],
+    [
+      "Avg. completion",
+      "--"
+    ],
+    [
+      "Top country",
+      "--"
+    ]
+  ],
+  "spotify": [
+    [
+      "Followers",
+      "0"
+    ],
+    [
+      "Streams (30d)",
+      "0"
+    ],
+    [
+      "Avg. listen time",
+      "--"
+    ],
+    [
+      "Starts (30d)",
+      "0"
+    ],
+    [
+      "Saves",
+      "0"
+    ],
+    [
+      "Top market",
+      "--"
+    ]
+  ],
+  "monthly": [
+    {
+      "month": "Aug '26",
+      "yt": 169,
+      "ap": 0,
+      "sp": 0
+    }
+  ],
+  "topEpisodes": [
+    {
+      "title": "Hire a Full-time Athena EA: athenago.me/eric-jorgenson #athenaEA #executiveassistant #shorts",
+      "date": "Mar 22, 2023",
+      "plays": "921"
+    },
+    {
+      "title": "#084 Augustus Doricko: How to Terraform Earth, History of Weather Control, and The Mandate of Heaven",
+      "date": "Dec 10, 2024",
+      "plays": "592"
+    },
+    {
+      "title": "What 'Friend' Means in Russia #ericjorgenson #smartfriends #arkadykulik #podcast #connections",
+      "date": "Jun 28, 2024",
+      "plays": "549"
+    },
+    {
+      "title": "Athena's Rigorous Hiring Process. Hire a Full-time EA: athenago.me/eric-jorgenson #athenaEA #shorts",
+      "date": "Mar 24, 2023",
+      "plays": "418"
+    },
+    {
+      "title": "Balaji Srinivasan - Formative Media #balajisrinivasan #ericjorgenson #books #howlsmovingcastle",
+      "date": "Oct 21, 2022",
+      "plays": "398"
+    }
+  ]
+}

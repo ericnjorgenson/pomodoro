@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-08-18T14:06:01.269Z",
+  "updatedAt": "2026-08-19T06:37:17.638Z",
   "kpis": {
     "followers": {
       "value": 7110
     },
     "downloads": {
-      "value": 169
+      "value": 704
     },
     "episodes": {
       "value": 156
@@ -21,23 +21,23 @@
     ],
     [
       "Total views",
-      "292,023"
+      "292,236"
     ],
     [
       "Views (30d)",
-      "169"
+      "704"
     ],
     [
       "Avg. duration",
-      "0:27"
+      "0:26"
     ],
     [
       "Likes (30d)",
-      "4"
+      "26"
     ],
     [
       "Comments (30d)",
-      "0"
+      "1"
     ]
   ],
   "apple": [
@@ -95,36 +95,36 @@
   "monthly": [
     {
       "month": "Aug '26",
-      "yt": 169,
+      "yt": 704,
       "ap": 0,
       "sp": 0
     }
   ],
   "topEpisodes": [
     {
-      "title": "Hire a Full-time Athena EA: athenago.me/eric-jorgenson #athenaEA #executiveassistant #shorts",
-      "date": "Mar 22, 2023",
-      "plays": "921"
+      "title": "The Elite Private High School Where Students Earn A Million Dollars: [Nat Eliason of Founder School",
+      "date": "Jun 2, 2026",
+      "plays": "683"
     },
     {
-      "title": "#084 Augustus Doricko: How to Terraform Earth, History of Weather Control, and The Mandate of Heaven",
-      "date": "Dec 10, 2024",
-      "plays": "592"
+      "title": "The Book of Elon launches today",
+      "date": "Mar 24, 2026",
+      "plays": "644"
     },
     {
-      "title": "What 'Friend' Means in Russia #ericjorgenson #smartfriends #arkadykulik #podcast #connections",
-      "date": "Jun 28, 2024",
-      "plays": "549"
+      "title": "#105 ​Inside the Underground Meme Marketing World: Jason Levin of Memelord",
+      "date": "Jun 16, 2026",
+      "plays": "627"
     },
     {
-      "title": "Athena's Rigorous Hiring Process. Hire a Full-time EA: athenago.me/eric-jorgenson #athenaEA #shorts",
-      "date": "Mar 24, 2023",
-      "plays": "418"
+      "title": "Elon Runs His Companies Like a Knife Fight—Every Single Day #elonmusk #bookofelon #startups",
+      "date": "May 15, 2026",
+      "plays": "360"
     },
     {
-      "title": "Balaji Srinivasan - Formative Media #balajisrinivasan #ericjorgenson #books #howlsmovingcastle",
-      "date": "Oct 21, 2022",
-      "plays": "398"
+      "title": "​The Next Renaissance, AI Reality vs Hype, and a Movement of Hope​ with Zack Kass",
+      "date": "May 5, 2026",
+      "plays": "354"
     }
   ]
 }

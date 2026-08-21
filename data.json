@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-08-20T06:39:03.150Z",
+  "updatedAt": "2026-08-21T06:39:06.106Z",
   "kpis": {
     "followers": {
-      "value": 7110
+      "value": 7130
     },
     "downloads": {
-      "value": 715
+      "value": 718
     },
     "episodes": {
       "value": 156
@@ -17,23 +17,23 @@
   "youtube": [
     [
       "Subscribers",
-      "7,110"
+      "7,130"
     ],
     [
       "Total views",
-      "292,785"
+      "293,236"
     ],
     [
       "Views (30d)",
-      "715"
+      "718"
     ],
     [
       "Avg. duration",
-      "0:26"
+      "0:25"
     ],
     [
       "Likes (30d)",
-      "26"
+      "27"
     ],
     [
       "Comments (30d)",
@@ -95,7 +95,7 @@
   "monthly": [
     {
       "month": "Aug '26",
-      "yt": 715,
+      "yt": 718,
       "ap": 0,
       "sp": 0
     }
@@ -104,7 +104,7 @@
     {
       "title": "The Elite Private High School Where Students Earn A Million Dollars: [Nat Eliason of Founder School",
       "date": "Jun 2, 2026",
-      "plays": "697"
+      "plays": "698"
     },
     {
       "title": "The Book of Elon launches today",
@@ -119,12 +119,12 @@
     {
       "title": "Elon Runs His Companies Like a Knife Fight—Every Single Day #elonmusk #bookofelon #startups",
       "date": "May 15, 2026",
-      "plays": "360"
+      "plays": "361"
     },
     {
       "title": "​The Next Renaissance, AI Reality vs Hype, and a Movement of Hope​ with Zack Kass",
       "date": "May 5, 2026",
-      "plays": "357"
+      "plays": "358"
     }
   ]
 }

@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-08-21T06:39:06.106Z",
+  "updatedAt": "2026-08-22T06:33:23.031Z",
   "kpis": {
     "followers": {
-      "value": 7130
+      "value": 7140
     },
     "downloads": {
-      "value": 718
+      "value": 766
     },
     "episodes": {
       "value": 156
@@ -17,15 +17,15 @@
   "youtube": [
     [
       "Subscribers",
-      "7,130"
+      "7,140"
     ],
     [
       "Total views",
-      "293,236"
+      "293,781"
     ],
     [
       "Views (30d)",
-      "718"
+      "766"
     ],
     [
       "Avg. duration",
@@ -33,7 +33,7 @@
     ],
     [
       "Likes (30d)",
-      "27"
+      "28"
     ],
     [
       "Comments (30d)",
@@ -95,7 +95,7 @@
   "monthly": [
     {
       "month": "Aug '26",
-      "yt": 718,
+      "yt": 766,
       "ap": 0,
       "sp": 0
     }
@@ -109,12 +109,12 @@
     {
       "title": "The Book of Elon launches today",
       "date": "Mar 24, 2026",
-      "plays": "644"
+      "plays": "646"
     },
     {
       "title": "#105 ​Inside the Underground Meme Marketing World: Jason Levin of Memelord",
       "date": "Jun 16, 2026",
-      "plays": "627"
+      "plays": "628"
     },
     {
       "title": "Elon Runs His Companies Like a Knife Fight—Every Single Day #elonmusk #bookofelon #startups",
@@ -124,7 +124,7 @@
     {
       "title": "​The Next Renaissance, AI Reality vs Hype, and a Movement of Hope​ with Zack Kass",
       "date": "May 5, 2026",
-      "plays": "358"
+      "plays": "361"
     }
   ]
 }

@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-08-22T06:33:23.031Z",
+  "updatedAt": "2026-08-23T06:34:28.406Z",
   "kpis": {
     "followers": {
-      "value": 7140
+      "value": 7150
     },
     "downloads": {
-      "value": 766
+      "value": 777
     },
     "episodes": {
       "value": 156
@@ -17,15 +17,15 @@
   "youtube": [
     [
       "Subscribers",
-      "7,140"
+      "7,150"
     ],
     [
       "Total views",
-      "293,781"
+      "294,266"
     ],
     [
       "Views (30d)",
-      "766"
+      "777"
     ],
     [
       "Avg. duration",
@@ -95,7 +95,7 @@
   "monthly": [
     {
       "month": "Aug '26",
-      "yt": 766,
+      "yt": 777,
       "ap": 0,
       "sp": 0
     }
@@ -104,7 +104,7 @@
     {
       "title": "The Elite Private High School Where Students Earn A Million Dollars: [Nat Eliason of Founder School",
       "date": "Jun 2, 2026",
-      "plays": "698"
+      "plays": "700"
     },
     {
       "title": "The Book of Elon launches today",
@@ -114,16 +114,16 @@
     {
       "title": "#105 ​Inside the Underground Meme Marketing World: Jason Levin of Memelord",
       "date": "Jun 16, 2026",
-      "plays": "628"
-    },
-    {
-      "title": "Elon Runs His Companies Like a Knife Fight—Every Single Day #elonmusk #bookofelon #startups",
-      "date": "May 15, 2026",
-      "plays": "361"
+      "plays": "636"
     },
     {
       "title": "​The Next Renaissance, AI Reality vs Hype, and a Movement of Hope​ with Zack Kass",
       "date": "May 5, 2026",
+      "plays": "363"
+    },
+    {
+      "title": "Elon Runs His Companies Like a Knife Fight—Every Single Day #elonmusk #bookofelon #startups",
+      "date": "May 15, 2026",
       "plays": "361"
     }
   ]

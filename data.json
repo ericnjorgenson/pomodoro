@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-08-24T06:51:06.999Z",
+  "updatedAt": "2026-08-25T06:39:34.472Z",
   "kpis": {
     "followers": {
-      "value": 7160
+      "value": 7170
     },
     "downloads": {
-      "value": 631
+      "value": 636
     },
     "episodes": {
       "value": 156
@@ -17,15 +17,15 @@
   "youtube": [
     [
       "Subscribers",
-      "7,160"
+      "7,170"
     ],
     [
       "Total views",
-      "294,716"
+      "295,140"
     ],
     [
       "Views (30d)",
-      "631"
+      "636"
     ],
     [
       "Avg. duration",
@@ -95,7 +95,7 @@
   "monthly": [
     {
       "month": "Aug '26",
-      "yt": 631,
+      "yt": 636,
       "ap": 0,
       "sp": 0
     }
@@ -104,12 +104,12 @@
     {
       "title": "The Elite Private High School Where Students Earn A Million Dollars: [Nat Eliason of Founder School",
       "date": "Jun 2, 2026",
-      "plays": "702"
+      "plays": "710"
     },
     {
       "title": "The Book of Elon launches today",
       "date": "Mar 24, 2026",
-      "plays": "647"
+      "plays": "648"
     },
     {
       "title": "#105 ​Inside the Underground Meme Marketing World: Jason Levin of Memelord",
@@ -124,7 +124,7 @@
     {
       "title": "​The Next Renaissance, AI Reality vs Hype, and a Movement of Hope​ with Zack Kass",
       "date": "May 5, 2026",
-      "plays": "363"
+      "plays": "364"
     }
   ]
 }

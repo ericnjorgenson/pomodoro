@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-08-25T06:39:34.472Z",
+  "updatedAt": "2026-08-26T06:41:10.842Z",
   "kpis": {
     "followers": {
-      "value": 7170
+      "value": 7180
     },
     "downloads": {
-      "value": 636
+      "value": 15
     },
     "episodes": {
       "value": 156
@@ -17,27 +17,27 @@
   "youtube": [
     [
       "Subscribers",
-      "7,170"
+      "7,180"
     ],
     [
       "Total views",
-      "295,140"
+      "295,730"
     ],
     [
       "Views (30d)",
-      "636"
+      "15"
     ],
     [
       "Avg. duration",
-      "0:26"
+      "0:22"
     ],
     [
       "Likes (30d)",
-      "24"
+      "0"
     ],
     [
       "Comments (30d)",
-      "1"
+      "0"
     ]
   ],
   "apple": [
@@ -95,36 +95,36 @@
   "monthly": [
     {
       "month": "Aug '26",
-      "yt": 636,
+      "yt": 15,
       "ap": 0,
       "sp": 0
     }
   ],
   "topEpisodes": [
     {
-      "title": "The Elite Private High School Where Students Earn A Million Dollars: [Nat Eliason of Founder School",
-      "date": "Jun 2, 2026",
-      "plays": "710"
+      "title": "Hire a Full-time Athena EA: athenago.me/eric-jorgenson #athenaEA #executiveassistant #shorts",
+      "date": "Mar 22, 2023",
+      "plays": "950"
     },
     {
-      "title": "The Book of Elon launches today",
-      "date": "Mar 24, 2026",
-      "plays": "648"
+      "title": "#084 Augustus Doricko: How to Terraform Earth, History of Weather Control, and The Mandate of Heaven",
+      "date": "Dec 10, 2024",
+      "plays": "593"
     },
     {
-      "title": "#105 ​Inside the Underground Meme Marketing World: Jason Levin of Memelord",
-      "date": "Jun 16, 2026",
-      "plays": "637"
+      "title": "What 'Friend' Means in Russia #ericjorgenson #smartfriends #arkadykulik #podcast #connections",
+      "date": "Jun 28, 2024",
+      "plays": "549"
     },
     {
-      "title": "Elon Runs His Companies Like a Knife Fight—Every Single Day #elonmusk #bookofelon #startups",
-      "date": "May 15, 2026",
-      "plays": "365"
+      "title": "Athena's Rigorous Hiring Process. Hire a Full-time EA: athenago.me/eric-jorgenson #athenaEA #shorts",
+      "date": "Mar 24, 2023",
+      "plays": "439"
     },
     {
-      "title": "​The Next Renaissance, AI Reality vs Hype, and a Movement of Hope​ with Zack Kass",
-      "date": "May 5, 2026",
-      "plays": "364"
+      "title": "Balaji Srinivasan - Formative Media #balajisrinivasan #ericjorgenson #books #howlsmovingcastle",
+      "date": "Oct 21, 2022",
+      "plays": "398"
     }
   ]
 }

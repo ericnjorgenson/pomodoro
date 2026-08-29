@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-08-28T18:09:05.927Z",
+  "updatedAt": "2026-08-29T12:13:21.321Z",
   "kpis": {
     "followers": {
-      "value": 7200
+      "value": 7210
     },
     "downloads": {
-      "value": 638
+      "value": 186
     },
     "episodes": {
       "value": 156
@@ -17,15 +17,15 @@
   "youtube": [
     [
       "Subscribers",
-      "7,200"
+      "7,210"
     ],
     [
       "Total views",
-      "296,894"
+      "297,889"
     ],
     [
       "Views (30d)",
-      "638"
+      "186"
     ],
     [
       "Avg. duration",
@@ -33,11 +33,11 @@
     ],
     [
       "Likes (30d)",
-      "24"
+      "6"
     ],
     [
       "Comments (30d)",
-      "1"
+      "0"
     ]
   ],
   "apple": [
@@ -95,36 +95,36 @@
   "monthly": [
     {
       "month": "Aug '26",
-      "yt": 638,
+      "yt": 186,
       "ap": 0,
       "sp": 0
     }
   ],
   "topEpisodes": [
     {
-      "title": "The Elite Private High School Where Students Earn A Million Dollars: [Nat Eliason of Founder School",
-      "date": "Jun 2, 2026",
-      "plays": "734"
+      "title": "My Conversation with Naval Megasode",
+      "date": "Jan 29, 2026",
+      "plays": "87.6K"
     },
     {
-      "title": "#105 ​Inside the Underground Meme Marketing World: Jason Levin of Memelord",
-      "date": "Jun 16, 2026",
+      "title": "Sarma Melngailis: Bad Vegan Made Netflix Millions—I Got Left With Debt #badvegan #netflix #books",
+      "date": "Aug 27, 2025",
+      "plays": "1.3K"
+    },
+    {
+      "title": "The Book of Elon launches today",
+      "date": "Mar 24, 2026",
       "plays": "649"
     },
     {
-      "title": "​The Next Renaissance, AI Reality vs Hype, and a Movement of Hope​ with Zack Kass",
-      "date": "May 5, 2026",
-      "plays": "372"
+      "title": "#099 Jonathan Swanson: Scaling Thumbtack, 10x Delegation, and Designing an Ideal Life",
+      "date": "Jan 6, 2026",
+      "plays": "398"
     },
     {
-      "title": "Elon Runs His Companies Like a Knife Fight—Every Single Day #elonmusk #bookofelon #startups",
-      "date": "May 15, 2026",
-      "plays": "365"
-    },
-    {
-      "title": "Maniacal Urgency: How Elon Gets Weeks of Work Done in Hours #elonmusk #startups #bookofelon",
-      "date": "May 14, 2026",
-      "plays": "276"
+      "title": "Eric Jorgenson Talks About The Book of Elon Live on TBPN",
+      "date": "Apr 1, 2026",
+      "plays": "264"
     }
   ]
 }

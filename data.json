@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-08-31T12:35:30.894Z",
+  "updatedAt": "2026-09-01T11:02:09.910Z",
   "kpis": {
     "followers": {
       "value": 7230
     },
     "downloads": {
-      "value": 219
+      "value": 83
     },
     "episodes": {
       "value": 156
@@ -21,19 +21,19 @@
     ],
     [
       "Total views",
-      "299,821"
+      "300,974"
     ],
     [
       "Views (30d)",
-      "219"
+      "83"
     ],
     [
       "Avg. duration",
-      "0:25"
+      "0:31"
     ],
     [
       "Likes (30d)",
-      "8"
+      "4"
     ],
     [
       "Comments (30d)",
@@ -98,33 +98,39 @@
       "yt": 219,
       "ap": 0,
       "sp": 0
+    },
+    {
+      "month": "Sep '26",
+      "yt": 83,
+      "ap": 0,
+      "sp": 0
     }
   ],
   "topEpisodes": [
     {
-      "title": "My Conversation with Naval Megasode",
-      "date": "Jan 29, 2026",
-      "plays": "88.9K"
+      "title": "Hire a Full-time Athena EA: athenago.me/eric-jorgenson #athenaEA #executiveassistant #shorts",
+      "date": "Mar 22, 2023",
+      "plays": "981"
     },
     {
-      "title": "Sarma Melngailis: Bad Vegan Made Netflix Millions—I Got Left With Debt #badvegan #netflix #books",
-      "date": "Aug 27, 2025",
-      "plays": "1.4K"
+      "title": "#084 Augustus Doricko: How to Terraform Earth, History of Weather Control, and The Mandate of Heaven",
+      "date": "Dec 10, 2024",
+      "plays": "593"
     },
     {
-      "title": "The Book of Elon launches today",
-      "date": "Mar 24, 2026",
-      "plays": "653"
+      "title": "What 'Friend' Means in Russia #ericjorgenson #smartfriends #arkadykulik #podcast #connections",
+      "date": "Jun 28, 2024",
+      "plays": "550"
     },
     {
-      "title": "#099 Jonathan Swanson: Scaling Thumbtack, 10x Delegation, and Designing an Ideal Life",
-      "date": "Jan 6, 2026",
-      "plays": "400"
+      "title": "Athena's Rigorous Hiring Process. Hire a Full-time EA: athenago.me/eric-jorgenson #athenaEA #shorts",
+      "date": "Mar 24, 2023",
+      "plays": "462"
     },
     {
-      "title": "Eric Jorgenson Talks About The Book of Elon Live on TBPN",
-      "date": "Apr 1, 2026",
-      "plays": "266"
+      "title": "Balaji Srinivasan - Formative Media #balajisrinivasan #ericjorgenson #books #howlsmovingcastle",
+      "date": "Oct 21, 2022",
+      "plays": "398"
     }
   ]
 }

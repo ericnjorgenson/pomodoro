@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-09-02T10:32:50.898Z",
+  "updatedAt": "2026-09-03T10:37:14.433Z",
   "kpis": {
     "followers": {
-      "value": 7250
+      "value": 7260
     },
     "downloads": {
-      "value": 403
+      "value": 328
     },
     "episodes": {
       "value": 156
@@ -17,27 +17,27 @@
   "youtube": [
     [
       "Subscribers",
-      "7,250"
+      "7,260"
     ],
     [
       "Total views",
-      "302,041"
+      "303,045"
     ],
     [
       "Views (30d)",
-      "403"
+      "328"
     ],
     [
       "Avg. duration",
-      "16:36"
+      "22:05"
     ],
     [
       "Likes (30d)",
-      "10"
+      "7"
     ],
     [
       "Comments (30d)",
-      "0"
+      "1"
     ]
   ],
   "apple": [
@@ -101,36 +101,36 @@
     },
     {
       "month": "Sep '26",
-      "yt": 403,
+      "yt": 328,
       "ap": 0,
       "sp": 0
     }
   ],
   "topEpisodes": [
     {
-      "title": "My Conversation with Naval Megasode",
-      "date": "Jan 29, 2026",
-      "plays": "90.3K"
+      "title": "Hire a Full-time Athena EA: athenago.me/eric-jorgenson #athenaEA #executiveassistant #shorts",
+      "date": "Mar 22, 2023",
+      "plays": "994"
     },
     {
-      "title": "Sarma Melngailis: Bad Vegan Made Netflix Millions—I Got Left With Debt #badvegan #netflix #books",
-      "date": "Aug 27, 2025",
-      "plays": "1.4K"
+      "title": "#084 Augustus Doricko: How to Terraform Earth, History of Weather Control, and The Mandate of Heaven",
+      "date": "Dec 10, 2024",
+      "plays": "593"
     },
     {
-      "title": "The Book of Elon launches today",
-      "date": "Mar 24, 2026",
-      "plays": "657"
+      "title": "What 'Friend' Means in Russia #ericjorgenson #smartfriends #arkadykulik #podcast #connections",
+      "date": "Jun 28, 2024",
+      "plays": "550"
     },
     {
-      "title": "#099 Jonathan Swanson: Scaling Thumbtack, 10x Delegation, and Designing an Ideal Life",
-      "date": "Jan 6, 2026",
-      "plays": "402"
+      "title": "Athena's Rigorous Hiring Process. Hire a Full-time EA: athenago.me/eric-jorgenson #athenaEA #shorts",
+      "date": "Mar 24, 2023",
+      "plays": "474"
     },
     {
-      "title": "Eric Jorgenson Talks About The Book of Elon Live on TBPN",
-      "date": "Apr 1, 2026",
-      "plays": "270"
+      "title": "Balaji Srinivasan - Formative Media #balajisrinivasan #ericjorgenson #books #howlsmovingcastle",
+      "date": "Oct 21, 2022",
+      "plays": "398"
     }
   ]
 }

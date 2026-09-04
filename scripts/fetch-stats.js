@@ -4,6 +4,7 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 const API_KEY = process.env.YOUTUBE_API_KEY;
 const CHANNEL_ID = process.env.YOUTUBE_CHANNEL_ID;
+const SHEET_ID = process.env.GOOGLE_SHEET_ID;
 const YT_BASE = 'https://www.googleapis.com/youtube/v3';
 
 async function ytJSON(endpoint, params) {
@@ -55,13 +56,73 @@ async function fetchYouTube() {
   return { subscribers: +s.subscriberCount, totalViews: +s.viewCount, views30d, likes30d, comments30d, avgDuration, topVideos };
 }
 
+// Parse a published Google Sheet (CSV) into a key-value map.
+// Expected format: column A = metric key, column B = value.
+async function fetchGoogleSheet() {
+  const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=Summary`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`Google Sheet fetch failed: ${res.status}`);
+  const csv = await res.text();
+
+  const rows = csv.trim().split('\n').map(line => {
+    const cells = [];
+    let current = '';
+    let inQuotes = false;
+    for (const ch of line) {
+      if (ch === '"') { inQuotes = !inQuotes; continue; }
+      if (ch === ',' && !inQuotes) { cells.push(current.trim()); current = ''; continue; }
+      current += ch;
+    }
+    cells.push(current.trim());
+    return cells;
+  });
+
+  const kv = {};
+  for (const [key, val] of rows) {
+    if (key) kv[key] = val;
+  }
+
+  function num(k) { return parseFloat(kv[k]) || 0; }
+  function str(k) { return kv[k] || '--'; }
+
+  return {
+    totalEpisodes: num('totalEpisodes'),
+    apple: {
+      followers: num('apple_followers'),
+      rating: num('apple_rating') || str('apple_rating'),
+      reviews: num('apple_reviews'),
+      downloads30d: num('apple_downloads30d'),
+      avgCompletion: str('apple_avgCompletion'),
+      topCountry: str('apple_topCountry'),
+    },
+    spotify: {
+      followers: num('spotify_followers'),
+      streams30d: num('spotify_streams30d'),
+      avgListenTime: str('spotify_avgListenTime'),
+      starts30d: num('spotify_starts30d'),
+      saves: num('spotify_saves'),
+      topMarket: str('spotify_topMarket'),
+    },
+    topEpisodes: [],
+  };
+}
+
 function fmtBig(n) {
   if (n >= 1e6) return (n / 1e6).toFixed(2) + 'M';
   return n.toLocaleString('en-US');
 }
 
 async function main() {
-  const manual = JSON.parse(fs.readFileSync(path.join(ROOT, 'manual-stats.json'), 'utf-8'));
+  let manual;
+
+  if (SHEET_ID) {
+    console.log('Reading Apple/Spotify stats from Google Sheet...');
+    manual = await fetchGoogleSheet();
+    console.log(`  Apple followers: ${manual.apple.followers}, Spotify followers: ${manual.spotify.followers}`);
+  } else {
+    console.log('No GOOGLE_SHEET_ID set — reading from manual-stats.json');
+    manual = JSON.parse(fs.readFileSync(path.join(ROOT, 'manual-stats.json'), 'utf-8'));
+  }
 
   let existing = { monthly: [] };
   const dataPath = path.join(ROOT, 'data.json');

@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-09-07T11:29:02.965Z",
+  "updatedAt": "2026-09-08T10:31:17.362Z",
   "kpis": {
     "followers": {
-      "value": 7300
+      "value": 7310
     },
     "downloads": {
-      "value": 314
+      "value": 332
     },
     "episodes": {
       "value": 156
@@ -17,23 +17,23 @@
   "youtube": [
     [
       "Subscribers",
-      "7,300"
+      "7,310"
     ],
     [
       "Total views",
-      "306,658"
+      "307,702"
     ],
     [
       "Views (30d)",
-      "314"
+      "332"
     ],
     [
       "Avg. duration",
-      "0:27"
+      "0:25"
     ],
     [
       "Likes (30d)",
-      "8"
+      "9"
     ],
     [
       "Comments (30d)",
@@ -101,7 +101,7 @@
     },
     {
       "month": "Sep '26",
-      "yt": 314,
+      "yt": 332,
       "ap": 0,
       "sp": 0
     }
@@ -110,7 +110,7 @@
     {
       "title": "My Conversation with Naval Megasode",
       "date": "Jan 29, 2026",
-      "plays": "93.0K"
+      "plays": "93.5K"
     },
     {
       "title": "Sarma Melngailis: Bad Vegan Made Netflix Millions—I Got Left With Debt #badvegan #netflix #books",

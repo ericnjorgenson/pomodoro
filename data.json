@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-09-11T10:32:36.027Z",
+  "updatedAt": "2026-09-12T10:00:47.880Z",
   "kpis": {
     "followers": {
-      "value": 7340
+      "value": 7350
     },
     "downloads": {
-      "value": 374
+      "value": 385
     },
     "episodes": {
       "value": 156
@@ -17,19 +17,19 @@
   "youtube": [
     [
       "Subscribers",
-      "7,340"
+      "7,350"
     ],
     [
       "Total views",
-      "311,577"
+      "312,675"
     ],
     [
       "Views (30d)",
-      "374"
+      "385"
     ],
     [
       "Avg. duration",
-      "0:25"
+      "0:26"
     ],
     [
       "Likes (30d)",
@@ -101,7 +101,7 @@
     },
     {
       "month": "Sep '26",
-      "yt": 374,
+      "yt": 385,
       "ap": 0,
       "sp": 0
     }
@@ -110,7 +110,7 @@
     {
       "title": "My Conversation with Naval Megasode",
       "date": "Jan 29, 2026",
-      "plays": "95.8K"
+      "plays": "96.7K"
     },
     {
       "title": "Sarma Melngailis: Bad Vegan Made Netflix Millions—I Got Left With Debt #badvegan #netflix #books",
@@ -120,7 +120,7 @@
     {
       "title": "The Book of Elon launches today",
       "date": "Mar 24, 2026",
-      "plays": "662"
+      "plays": "665"
     },
     {
       "title": "#099 Jonathan Swanson: Scaling Thumbtack, 10x Delegation, and Designing an Ideal Life",
@@ -130,7 +130,7 @@
     {
       "title": "Eric Jorgenson Talks About The Book of Elon Live on TBPN",
       "date": "Apr 1, 2026",
-      "plays": "274"
+      "plays": "276"
     }
   ]
 }

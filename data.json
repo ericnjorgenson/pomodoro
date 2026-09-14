@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-09-13T11:01:46.458Z",
+  "updatedAt": "2026-09-14T11:40:55.577Z",
   "kpis": {
     "followers": {
-      "value": 7360
+      "value": 7380
     },
     "downloads": {
-      "value": 797
+      "value": 824
     },
     "episodes": {
       "value": 156
@@ -17,15 +17,15 @@
   "youtube": [
     [
       "Subscribers",
-      "7,360"
+      "7,380"
     ],
     [
       "Total views",
-      "313,957"
+      "315,486"
     ],
     [
       "Views (30d)",
-      "797"
+      "824"
     ],
     [
       "Avg. duration",
@@ -101,7 +101,7 @@
     },
     {
       "month": "Sep '26",
-      "yt": 797,
+      "yt": 824,
       "ap": 0,
       "sp": 0
     }
@@ -110,7 +110,7 @@
     {
       "title": "My Conversation with Naval Megasode",
       "date": "Jan 29, 2026",
-      "plays": "97.5K"
+      "plays": "98.7K"
     },
     {
       "title": "Sarma Melngailis: Bad Vegan Made Netflix Millions—I Got Left With Debt #badvegan #netflix #books",
@@ -120,7 +120,7 @@
     {
       "title": "The Book of Elon launches today",
       "date": "Mar 24, 2026",
-      "plays": "666"
+      "plays": "668"
     },
     {
       "title": "#099 Jonathan Swanson: Scaling Thumbtack, 10x Delegation, and Designing an Ideal Life",
@@ -130,7 +130,7 @@
     {
       "title": "#106 130 Million Meals made by Robots: Rajat Bhageria of Chef Robotics",
       "date": "Sep 1, 2026",
-      "plays": "405"
+      "plays": "414"
     }
   ]
 }

@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-09-15T10:59:07.692Z",
+  "updatedAt": "2026-09-16T10:47:31.161Z",
   "kpis": {
     "followers": {
-      "value": 7390
+      "value": 7400
     },
     "downloads": {
-      "value": 817
+      "value": 401
     },
     "episodes": {
       "value": 156
@@ -17,27 +17,27 @@
   "youtube": [
     [
       "Subscribers",
-      "7,390"
+      "7,400"
     ],
     [
       "Total views",
-      "317,139"
+      "318,648"
     ],
     [
       "Views (30d)",
-      "817"
+      "401"
     ],
     [
       "Avg. duration",
-      "11:13"
+      "0:25"
     ],
     [
       "Likes (30d)",
-      "16"
+      "9"
     ],
     [
       "Comments (30d)",
-      "1"
+      "0"
     ]
   ],
   "apple": [
@@ -101,7 +101,7 @@
     },
     {
       "month": "Sep '26",
-      "yt": 817,
+      "yt": 401,
       "ap": 0,
       "sp": 0
     }
@@ -110,7 +110,7 @@
     {
       "title": "My Conversation with Naval Megasode",
       "date": "Jan 29, 2026",
-      "plays": "99.6K"
+      "plays": "100.9K"
     },
     {
       "title": "Sarma Melngailis: Bad Vegan Made Netflix Millions—I Got Left With Debt #badvegan #netflix #books",
@@ -123,14 +123,14 @@
       "plays": "671"
     },
     {
-      "title": "#106 130 Million Meals made by Robots: Rajat Bhageria of Chef Robotics",
-      "date": "Sep 1, 2026",
-      "plays": "417"
-    },
-    {
       "title": "#099 Jonathan Swanson: Scaling Thumbtack, 10x Delegation, and Designing an Ideal Life",
       "date": "Jan 6, 2026",
       "plays": "416"
+    },
+    {
+      "title": "Eric Jorgenson Talks About The Book of Elon Live on TBPN",
+      "date": "Apr 1, 2026",
+      "plays": "280"
     }
   ]
 }

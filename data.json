@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-09-22T10:54:23.045Z",
+  "updatedAt": "2026-09-23T10:42:25.168Z",
   "kpis": {
     "followers": {
-      "value": 7460
+      "value": 7470
     },
     "downloads": {
-      "value": 313
+      "value": 314
     },
     "episodes": {
       "value": 156
@@ -17,15 +17,15 @@
   "youtube": [
     [
       "Subscribers",
-      "7,460"
+      "7,470"
     ],
     [
       "Total views",
-      "327,225"
+      "327,892"
     ],
     [
       "Views (30d)",
-      "313"
+      "314"
     ],
     [
       "Avg. duration",
@@ -101,7 +101,7 @@
     },
     {
       "month": "Sep '26",
-      "yt": 313,
+      "yt": 314,
       "ap": 0,
       "sp": 0
     }
@@ -110,7 +110,7 @@
     {
       "title": "My Conversation with Naval Megasode",
       "date": "Jan 29, 2026",
-      "plays": "105.6K"
+      "plays": "106.3K"
     },
     {
       "title": "Sarma Melngailis: Bad Vegan Made Netflix Millions—I Got Left With Debt #badvegan #netflix #books",
@@ -130,7 +130,7 @@
     {
       "title": "Eric Jorgenson Talks About The Book of Elon Live on TBPN",
       "date": "Apr 1, 2026",
-      "plays": "282"
+      "plays": "285"
     }
   ]
 }

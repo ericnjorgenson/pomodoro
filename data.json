@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-09-27T11:19:30.604Z",
+  "updatedAt": "2026-09-28T12:48:37.056Z",
   "kpis": {
     "followers": {
-      "value": 7510
+      "value": 7530
     },
     "downloads": {
-      "value": 124
+      "value": 126
     },
     "episodes": {
       "value": 156
@@ -17,15 +17,15 @@
   "youtube": [
     [
       "Subscribers",
-      "7,510"
+      "7,530"
     ],
     [
       "Total views",
-      "332,338"
+      "332,754"
     ],
     [
       "Views (30d)",
-      "124"
+      "126"
     ],
     [
       "Avg. duration",
@@ -101,7 +101,7 @@
     },
     {
       "month": "Sep '26",
-      "yt": 124,
+      "yt": 126,
       "ap": 0,
       "sp": 0
     }
@@ -110,7 +110,7 @@
     {
       "title": "My Conversation with Naval Megasode",
       "date": "Jan 29, 2026",
-      "plays": "108.7K"
+      "plays": "109.4K"
     },
     {
       "title": "Sarma Melngailis: Bad Vegan Made Netflix Millions—I Got Left With Debt #badvegan #netflix #books",
@@ -120,7 +120,7 @@
     {
       "title": "The Book of Elon launches today",
       "date": "Mar 24, 2026",
-      "plays": "681"
+      "plays": "682"
     },
     {
       "title": "#099 Jonathan Swanson: Scaling Thumbtack, 10x Delegation, and Designing an Ideal Life",

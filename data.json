@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-10-02T11:49:11.275Z",
+  "updatedAt": "2026-10-03T11:02:28.695Z",
   "kpis": {
     "followers": {
-      "value": 7590
+      "value": 7610
     },
     "downloads": {
-      "value": 148
+      "value": 144
     },
     "episodes": {
       "value": 156
@@ -17,23 +17,23 @@
   "youtube": [
     [
       "Subscribers",
-      "7,590"
+      "7,610"
     ],
     [
       "Total views",
-      "337,016"
+      "337,897"
     ],
     [
       "Views (30d)",
-      "148"
+      "144"
     ],
     [
       "Avg. duration",
-      "0:22"
+      "0:20"
     ],
     [
       "Likes (30d)",
-      "0"
+      "1"
     ],
     [
       "Comments (30d)",
@@ -107,7 +107,7 @@
     },
     {
       "month": "Oct '26",
-      "yt": 148,
+      "yt": 144,
       "ap": 0,
       "sp": 0
     }
@@ -116,27 +116,27 @@
     {
       "title": "My Conversation with Naval Megasode",
       "date": "Jan 29, 2026",
-      "plays": "111.1K"
+      "plays": "111.5K"
     },
     {
-      "title": "Sarma Melngailis: Bad Vegan Made Netflix Millions—I Got Left With Debt #badvegan #netflix #books",
-      "date": "Aug 27, 2025",
-      "plays": "1.5K"
+      "title": "The Elite Private High School Where Students Earn A Million Dollars: [Nat Eliason of Founder School",
+      "date": "Jun 2, 2026",
+      "plays": "999"
+    },
+    {
+      "title": "#105 ​Inside the Underground Meme Marketing World: Jason Levin of Memelord",
+      "date": "Jun 16, 2026",
+      "plays": "859"
     },
     {
       "title": "The Book of Elon launches today",
       "date": "Mar 24, 2026",
-      "plays": "685"
+      "plays": "686"
     },
     {
-      "title": "#099 Jonathan Swanson: Scaling Thumbtack, 10x Delegation, and Designing an Ideal Life",
-      "date": "Jan 6, 2026",
-      "plays": "419"
-    },
-    {
-      "title": "Eric Jorgenson Talks About The Book of Elon Live on TBPN",
-      "date": "Apr 1, 2026",
-      "plays": "291"
+      "title": "Elon Runs His Companies Like a Knife Fight—Every Single Day #elonmusk #bookofelon #startups",
+      "date": "May 15, 2026",
+      "plays": "420"
     }
   ]
 }

@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-10-05T13:30:02.408Z",
+  "updatedAt": "2026-10-06T12:41:25.111Z",
   "kpis": {
     "followers": {
-      "value": 7620
+      "value": 7630
     },
     "downloads": {
-      "value": 56
+      "value": 278
     },
     "episodes": {
       "value": 156
@@ -17,23 +17,23 @@
   "youtube": [
     [
       "Subscribers",
-      "7,620"
+      "7,630"
     ],
     [
       "Total views",
-      "339,520"
+      "340,039"
     ],
     [
       "Views (30d)",
-      "56"
+      "278"
     ],
     [
       "Avg. duration",
-      "0:18"
+      "0:24"
     ],
     [
       "Likes (30d)",
-      "0"
+      "2"
     ],
     [
       "Comments (30d)",
@@ -107,36 +107,36 @@
     },
     {
       "month": "Oct '26",
-      "yt": 56,
+      "yt": 278,
       "ap": 0,
       "sp": 0
     }
   ],
   "topEpisodes": [
     {
-      "title": "My Conversation with Naval Megasode",
-      "date": "Jan 29, 2026",
-      "plays": "112.4K"
+      "title": "The Elite Private High School Where Students Earn A Million Dollars: [Nat Eliason of Founder School",
+      "date": "Jun 2, 2026",
+      "plays": "1.0K"
     },
     {
-      "title": "Tesla War Stories, Self-Driving at Waymo, & Building Salesforce of BOM | Spencer Penn - LightSource",
-      "date": "Feb 3, 2026",
-      "plays": "860"
+      "title": "#105 ​Inside the Underground Meme Marketing World: Jason Levin of Memelord",
+      "date": "Jun 16, 2026",
+      "plays": "870"
     },
     {
-      "title": "The Book of Elon launches today",
-      "date": "Mar 24, 2026",
-      "plays": "689"
+      "title": "#106 130 Million Meals made by Robots: Rajat Bhageria of Chef Robotics",
+      "date": "Sep 1, 2026",
+      "plays": "525"
     },
     {
-      "title": "#099 Jonathan Swanson: Scaling Thumbtack, 10x Delegation, and Designing an Ideal Life",
-      "date": "Jan 6, 2026",
-      "plays": "420"
+      "title": "Elon Runs His Companies Like a Knife Fight—Every Single Day #elonmusk #bookofelon #startups",
+      "date": "May 15, 2026",
+      "plays": "422"
     },
     {
       "title": "Maniacal Urgency: How Elon Gets Weeks of Work Done in Hours #elonmusk #startups #bookofelon",
       "date": "May 14, 2026",
-      "plays": "390"
+      "plays": "393"
     }
   ]
 }

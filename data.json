@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-10-11T12:02:27.109Z",
+  "updatedAt": "2026-10-12T14:19:29.682Z",
   "kpis": {
     "followers": {
       "value": 7660
     },
     "downloads": {
-      "value": 467
+      "value": 452
     },
     "episodes": {
       "value": 156
@@ -21,11 +21,11 @@
     ],
     [
       "Total views",
-      "344,430"
+      "345,779"
     ],
     [
       "Views (30d)",
-      "467"
+      "452"
     ],
     [
       "Avg. duration",
@@ -33,7 +33,7 @@
     ],
     [
       "Likes (30d)",
-      "9"
+      "10"
     ],
     [
       "Comments (30d)",
@@ -107,7 +107,7 @@
     },
     {
       "month": "Oct '26",
-      "yt": 467,
+      "yt": 452,
       "ap": 0,
       "sp": 0
     }
@@ -116,12 +116,12 @@
     {
       "title": "The Elite Private High School Where Students Earn A Million Dollars: [Nat Eliason of Founder School",
       "date": "Jun 2, 2026",
-      "plays": "1.0K"
+      "plays": "1.1K"
     },
     {
       "title": "#105 ​Inside the Underground Meme Marketing World: Jason Levin of Memelord",
       "date": "Jun 16, 2026",
-      "plays": "891"
+      "plays": "897"
     },
     {
       "title": "#106 130 Million Meals made by Robots: Rajat Bhageria of Chef Robotics",
@@ -136,7 +136,7 @@
     {
       "title": "Maniacal Urgency: How Elon Gets Weeks of Work Done in Hours #elonmusk #startups #bookofelon",
       "date": "May 14, 2026",
-      "plays": "420"
+      "plays": "424"
     }
   ]
 }

@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-10-15T10:48:09.696Z",
+  "updatedAt": "2026-10-16T10:36:59.729Z",
   "kpis": {
     "followers": {
-      "value": 7690
+      "value": 7700
     },
     "downloads": {
-      "value": 524
+      "value": 557
     },
     "episodes": {
       "value": 156
@@ -17,19 +17,19 @@
   "youtube": [
     [
       "Subscribers",
-      "7,690"
+      "7,700"
     ],
     [
       "Total views",
-      "348,226"
+      "348,358"
     ],
     [
       "Views (30d)",
-      "524"
+      "557"
     ],
     [
       "Avg. duration",
-      "0:25"
+      "0:24"
     ],
     [
       "Likes (30d)",
@@ -107,7 +107,7 @@
     },
     {
       "month": "Oct '26",
-      "yt": 524,
+      "yt": 557,
       "ap": 0,
       "sp": 0
     }
@@ -121,22 +121,22 @@
     {
       "title": "#105 ​Inside the Underground Meme Marketing World: Jason Levin of Memelord",
       "date": "Jun 16, 2026",
-      "plays": "908"
+      "plays": "915"
     },
     {
       "title": "#106 130 Million Meals made by Robots: Rajat Bhageria of Chef Robotics",
       "date": "Sep 1, 2026",
-      "plays": "556"
+      "plays": "558"
+    },
+    {
+      "title": "​The Next Renaissance, AI Reality vs Hype, and a Movement of Hope​ with Zack Kass",
+      "date": "May 5, 2026",
+      "plays": "480"
     },
     {
       "title": "Maniacal Urgency: How Elon Gets Weeks of Work Done in Hours #elonmusk #startups #bookofelon",
       "date": "May 14, 2026",
-      "plays": "461"
-    },
-    {
-      "title": "Elon Runs His Companies Like a Knife Fight—Every Single Day #elonmusk #bookofelon #startups",
-      "date": "May 15, 2026",
-      "plays": "436"
+      "plays": "476"
     }
   ]
 }

@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-10-17T10:05:48.791Z",
+  "updatedAt": "2026-10-18T10:19:19.139Z",
   "kpis": {
     "followers": {
-      "value": 7710
+      "value": 7720
     },
     "downloads": {
-      "value": 546
+      "value": 579
     },
     "episodes": {
       "value": 156
@@ -17,15 +17,15 @@
   "youtube": [
     [
       "Subscribers",
-      "7,710"
+      "7,720"
     ],
     [
       "Total views",
-      "349,730"
+      "350,226"
     ],
     [
       "Views (30d)",
-      "546"
+      "579"
     ],
     [
       "Avg. duration",
@@ -107,7 +107,7 @@
     },
     {
       "month": "Oct '26",
-      "yt": 546,
+      "yt": 579,
       "ap": 0,
       "sp": 0
     }
@@ -121,22 +121,22 @@
     {
       "title": "#105 ​Inside the Underground Meme Marketing World: Jason Levin of Memelord",
       "date": "Jun 16, 2026",
-      "plays": "918"
+      "plays": "919"
     },
     {
       "title": "#106 130 Million Meals made by Robots: Rajat Bhageria of Chef Robotics",
       "date": "Sep 1, 2026",
-      "plays": "561"
+      "plays": "564"
     },
     {
       "title": "Elon Runs His Companies Like a Knife Fight—Every Single Day #elonmusk #bookofelon #startups",
       "date": "May 15, 2026",
-      "plays": "441"
+      "plays": "446"
     },
     {
       "title": "#103 How to Destroy Bad Ideas Without Killing Relationships [The Dionysus Program with Sean Devine​]",
       "date": "May 19, 2026",
-      "plays": "279"
+      "plays": "280"
     }
   ]
 }

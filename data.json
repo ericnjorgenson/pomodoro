@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-10-19T12:00:16.682Z",
+  "updatedAt": "2026-10-20T10:52:54.356Z",
   "kpis": {
     "followers": {
-      "value": 7730
+      "value": 7740
     },
     "downloads": {
-      "value": 585
+      "value": 597
     },
     "episodes": {
       "value": 156
@@ -17,15 +17,15 @@
   "youtube": [
     [
       "Subscribers",
-      "7,730"
+      "7,740"
     ],
     [
       "Total views",
-      "351,290"
+      "351,980"
     ],
     [
       "Views (30d)",
-      "585"
+      "597"
     ],
     [
       "Avg. duration",
@@ -107,7 +107,7 @@
     },
     {
       "month": "Oct '26",
-      "yt": 585,
+      "yt": 597,
       "ap": 0,
       "sp": 0
     }
@@ -126,17 +126,17 @@
     {
       "title": "#106 130 Million Meals made by Robots: Rajat Bhageria of Chef Robotics",
       "date": "Sep 1, 2026",
-      "plays": "567"
-    },
-    {
-      "title": "Elon Runs His Companies Like a Knife Fight—Every Single Day #elonmusk #bookofelon #startups",
-      "date": "May 15, 2026",
-      "plays": "451"
+      "plays": "572"
     },
     {
       "title": "#103 How to Destroy Bad Ideas Without Killing Relationships [The Dionysus Program with Sean Devine​]",
       "date": "May 19, 2026",
-      "plays": "281"
+      "plays": "282"
+    },
+    {
+      "title": "Elon Musk Is Exactly Who He Always Wanted to Become #elonmusk #startups",
+      "date": "May 27, 2026",
+      "plays": "192"
     }
   ]
 }

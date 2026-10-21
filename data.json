@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-10-20T10:52:54.356Z",
+  "updatedAt": "2026-10-21T11:05:55.681Z",
   "kpis": {
     "followers": {
-      "value": 7740
+      "value": 7760
     },
     "downloads": {
-      "value": 597
+      "value": 647
     },
     "episodes": {
       "value": 156
@@ -17,27 +17,27 @@
   "youtube": [
     [
       "Subscribers",
-      "7,740"
+      "7,760"
     ],
     [
       "Total views",
-      "351,980"
+      "352,479"
     ],
     [
       "Views (30d)",
-      "597"
+      "647"
     ],
     [
       "Avg. duration",
-      "0:24"
+      "0:25"
     ],
     [
       "Likes (30d)",
-      "10"
+      "16"
     ],
     [
       "Comments (30d)",
-      "0"
+      "1"
     ]
   ],
   "apple": [
@@ -107,7 +107,7 @@
     },
     {
       "month": "Oct '26",
-      "yt": 597,
+      "yt": 647,
       "ap": 0,
       "sp": 0
     }
@@ -121,22 +121,22 @@
     {
       "title": "#105 ​Inside the Underground Meme Marketing World: Jason Levin of Memelord",
       "date": "Jun 16, 2026",
-      "plays": "920"
+      "plays": "921"
     },
     {
       "title": "#106 130 Million Meals made by Robots: Rajat Bhageria of Chef Robotics",
       "date": "Sep 1, 2026",
-      "plays": "572"
-    },
-    {
-      "title": "#103 How to Destroy Bad Ideas Without Killing Relationships [The Dionysus Program with Sean Devine​]",
-      "date": "May 19, 2026",
-      "plays": "282"
+      "plays": "575"
     },
     {
       "title": "Elon Musk Is Exactly Who He Always Wanted to Become #elonmusk #startups",
       "date": "May 27, 2026",
       "plays": "192"
+    },
+    {
+      "title": "Writing the Most Useful Elon Book #bookofelon #elonmusk #elonbook",
+      "date": "Jul 25, 2026",
+      "plays": "178"
     }
   ]
 }

@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-10-23T10:57:26.060Z",
+  "updatedAt": "2026-10-24T10:13:24.485Z",
   "kpis": {
     "followers": {
-      "value": 7770
+      "value": 7780
     },
     "downloads": {
-      "value": 716
+      "value": 745
     },
     "episodes": {
       "value": 156
@@ -17,15 +17,15 @@
   "youtube": [
     [
       "Subscribers",
-      "7,770"
+      "7,780"
     ],
     [
       "Total views",
-      "354,438"
+      "355,213"
     ],
     [
       "Views (30d)",
-      "716"
+      "745"
     ],
     [
       "Avg. duration",
@@ -33,7 +33,7 @@
     ],
     [
       "Likes (30d)",
-      "20"
+      "21"
     ],
     [
       "Comments (30d)",
@@ -107,7 +107,7 @@
     },
     {
       "month": "Oct '26",
-      "yt": 716,
+      "yt": 745,
       "ap": 0,
       "sp": 0
     }
@@ -121,12 +121,12 @@
     {
       "title": "#105 ​Inside the Underground Meme Marketing World: Jason Levin of Memelord",
       "date": "Jun 16, 2026",
-      "plays": "925"
+      "plays": "926"
     },
     {
       "title": "#106 130 Million Meals made by Robots: Rajat Bhageria of Chef Robotics",
       "date": "Sep 1, 2026",
-      "plays": "581"
+      "plays": "583"
     },
     {
       "title": "Elon Musk Is Exactly Who He Always Wanted to Become #elonmusk #startups",

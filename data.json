@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-10-28T12:03:08.253Z",
+  "updatedAt": "2026-10-29T12:13:28.314Z",
   "kpis": {
     "followers": {
-      "value": 7820
+      "value": 7830
     },
     "downloads": {
-      "value": 717
+      "value": 742
     },
     "episodes": {
       "value": 156
@@ -17,15 +17,15 @@
   "youtube": [
     [
       "Subscribers",
-      "7,820"
+      "7,830"
     ],
     [
       "Total views",
-      "357,833"
+      "358,529"
     ],
     [
       "Views (30d)",
-      "717"
+      "742"
     ],
     [
       "Avg. duration",
@@ -33,7 +33,7 @@
     ],
     [
       "Likes (30d)",
-      "23"
+      "24"
     ],
     [
       "Comments (30d)",
@@ -107,7 +107,7 @@
     },
     {
       "month": "Oct '26",
-      "yt": 717,
+      "yt": 742,
       "ap": 0,
       "sp": 0
     }
@@ -116,27 +116,27 @@
     {
       "title": "The Elite Private High School Where Students Earn A Million Dollars: [Nat Eliason of Founder School",
       "date": "Jun 2, 2026",
-      "plays": "1.1K"
+      "plays": "1.2K"
     },
     {
       "title": "#105 ​Inside the Underground Meme Marketing World: Jason Levin of Memelord",
       "date": "Jun 16, 2026",
-      "plays": "943"
+      "plays": "944"
     },
     {
       "title": "#106 130 Million Meals made by Robots: Rajat Bhageria of Chef Robotics",
       "date": "Sep 1, 2026",
-      "plays": "596"
+      "plays": "603"
     },
     {
       "title": "Elon Musk Is Exactly Who He Always Wanted to Become #elonmusk #startups",
       "date": "May 27, 2026",
-      "plays": "193"
+      "plays": "194"
     },
     {
       "title": "Writing the Most Useful Elon Book #bookofelon #elonmusk #elonbook",
       "date": "Jul 25, 2026",
-      "plays": "179"
+      "plays": "180"
     }
   ]
 }

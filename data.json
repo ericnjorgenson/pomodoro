@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-10-31T11:38:10.361Z",
+  "updatedAt": "2026-11-01T12:37:28.835Z",
   "kpis": {
     "followers": {
-      "value": 7840
+      "value": 7850
     },
     "downloads": {
-      "value": 750
+      "value": 796
     },
     "episodes": {
       "value": 156
@@ -17,15 +17,15 @@
   "youtube": [
     [
       "Subscribers",
-      "7,840"
+      "7,850"
     ],
     [
       "Total views",
-      "359,833"
+      "360,441"
     ],
     [
       "Views (30d)",
-      "750"
+      "796"
     ],
     [
       "Avg. duration",
@@ -33,11 +33,11 @@
     ],
     [
       "Likes (30d)",
-      "23"
+      "24"
     ],
     [
       "Comments (30d)",
-      "1"
+      "2"
     ]
   ],
   "apple": [
@@ -110,6 +110,12 @@
       "yt": 750,
       "ap": 0,
       "sp": 0
+    },
+    {
+      "month": "Nov '26",
+      "yt": 796,
+      "ap": 0,
+      "sp": 0
     }
   ],
   "topEpisodes": [
@@ -121,12 +127,12 @@
     {
       "title": "#105 ​Inside the Underground Meme Marketing World: Jason Levin of Memelord",
       "date": "Jun 16, 2026",
-      "plays": "945"
+      "plays": "948"
     },
     {
       "title": "#106 130 Million Meals made by Robots: Rajat Bhageria of Chef Robotics",
       "date": "Sep 1, 2026",
-      "plays": "608"
+      "plays": "610"
     },
     {
       "title": "Writing the Most Useful Elon Book #bookofelon #elonmusk #elonbook",
@@ -136,7 +142,7 @@
     {
       "title": "Elon Musk's Rule: Delete Before You Optimize #elonmusk #engineering #spacex #tesla",
       "date": "Aug 10, 2026",
-      "plays": "171"
+      "plays": "173"
     }
   ]
 }

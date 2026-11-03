@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-11-02T14:40:20.167Z",
+  "updatedAt": "2026-11-03T13:33:36.552Z",
   "kpis": {
     "followers": {
-      "value": 7860
+      "value": 7870
     },
     "downloads": {
-      "value": 809
+      "value": 827
     },
     "episodes": {
       "value": 156
@@ -17,23 +17,23 @@
   "youtube": [
     [
       "Subscribers",
-      "7,860"
+      "7,870"
     ],
     [
       "Total views",
-      "361,185"
+      "361,920"
     ],
     [
       "Views (30d)",
-      "809"
+      "827"
     ],
     [
       "Avg. duration",
-      "0:22"
+      "0:23"
     ],
     [
       "Likes (30d)",
-      "25"
+      "26"
     ],
     [
       "Comments (30d)",
@@ -113,7 +113,7 @@
     },
     {
       "month": "Nov '26",
-      "yt": 809,
+      "yt": 827,
       "ap": 0,
       "sp": 0
     }

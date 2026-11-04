@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-11-03T13:33:36.552Z",
+  "updatedAt": "2026-11-04T13:43:17.608Z",
   "kpis": {
     "followers": {
       "value": 7870
     },
     "downloads": {
-      "value": 827
+      "value": 869
     },
     "episodes": {
       "value": 156
@@ -21,15 +21,15 @@
     ],
     [
       "Total views",
-      "361,920"
+      "362,627"
     ],
     [
       "Views (30d)",
-      "827"
+      "869"
     ],
     [
       "Avg. duration",
-      "0:23"
+      "0:24"
     ],
     [
       "Likes (30d)",
@@ -113,7 +113,7 @@
     },
     {
       "month": "Nov '26",
-      "yt": 827,
+      "yt": 869,
       "ap": 0,
       "sp": 0
     }
@@ -127,7 +127,7 @@
     {
       "title": "#105 ​Inside the Underground Meme Marketing World: Jason Levin of Memelord",
       "date": "Jun 16, 2026",
-      "plays": "951"
+      "plays": "953"
     },
     {
       "title": "#106 130 Million Meals made by Robots: Rajat Bhageria of Chef Robotics",

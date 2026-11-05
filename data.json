@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-11-04T13:43:17.608Z",
+  "updatedAt": "2026-11-05T13:55:59.371Z",
   "kpis": {
     "followers": {
-      "value": 7870
+      "value": 7880
     },
     "downloads": {
-      "value": 869
+      "value": 822
     },
     "episodes": {
       "value": 156
@@ -17,23 +17,23 @@
   "youtube": [
     [
       "Subscribers",
-      "7,870"
+      "7,880"
     ],
     [
       "Total views",
-      "362,627"
+      "363,310"
     ],
     [
       "Views (30d)",
-      "869"
+      "822"
     ],
     [
       "Avg. duration",
-      "0:24"
+      "0:23"
     ],
     [
       "Likes (30d)",
-      "26"
+      "25"
     ],
     [
       "Comments (30d)",
@@ -113,7 +113,7 @@
     },
     {
       "month": "Nov '26",
-      "yt": 869,
+      "yt": 822,
       "ap": 0,
       "sp": 0
     }
@@ -132,7 +132,7 @@
     {
       "title": "#106 130 Million Meals made by Robots: Rajat Bhageria of Chef Robotics",
       "date": "Sep 1, 2026",
-      "plays": "614"
+      "plays": "619"
     },
     {
       "title": "Writing the Most Useful Elon Book #bookofelon #elonmusk #elonbook",

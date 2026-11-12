@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-11-11T13:29:13.174Z",
+  "updatedAt": "2026-11-12T14:33:25.784Z",
   "kpis": {
     "followers": {
-      "value": 7940
+      "value": 7950
     },
     "downloads": {
-      "value": 766
+      "value": 733
     },
     "episodes": {
       "value": 156
@@ -17,15 +17,15 @@
   "youtube": [
     [
       "Subscribers",
-      "7,940"
+      "7,950"
     ],
     [
       "Total views",
-      "367,292"
+      "368,214"
     ],
     [
       "Views (30d)",
-      "766"
+      "733"
     ],
     [
       "Avg. duration",
@@ -33,7 +33,7 @@
     ],
     [
       "Likes (30d)",
-      "23"
+      "24"
     ],
     [
       "Comments (30d)",
@@ -113,36 +113,36 @@
     },
     {
       "month": "Nov '26",
-      "yt": 766,
+      "yt": 733,
       "ap": 0,
       "sp": 0
     }
   ],
   "topEpisodes": [
     {
-      "title": "The Elite Private High School Where Students Earn A Million Dollars: [Nat Eliason of Founder School",
-      "date": "Jun 2, 2026",
-      "plays": "1.2K"
-    },
-    {
       "title": "#105 ​Inside the Underground Meme Marketing World: Jason Levin of Memelord",
       "date": "Jun 16, 2026",
-      "plays": "968"
+      "plays": "972"
     },
     {
       "title": "#106 130 Million Meals made by Robots: Rajat Bhageria of Chef Robotics",
       "date": "Sep 1, 2026",
-      "plays": "635"
+      "plays": "640"
     },
     {
-      "title": "Elon Runs His Companies Like a Knife Fight—Every Single Day #elonmusk #bookofelon #startups",
-      "date": "May 15, 2026",
-      "plays": "484"
+      "title": "Writing the Most Useful Elon Book #bookofelon #elonmusk #elonbook",
+      "date": "Jul 25, 2026",
+      "plays": "182"
     },
     {
-      "title": "#103 How to Destroy Bad Ideas Without Killing Relationships [The Dionysus Program with Sean Devine​]",
-      "date": "May 19, 2026",
-      "plays": "292"
+      "title": "Elon Musk's Rule: Delete Before You Optimize #elonmusk #engineering #spacex #tesla",
+      "date": "Aug 10, 2026",
+      "plays": "173"
+    },
+    {
+      "title": "Elon Thinks Like Both an Engineer and an Economist #elonmusk #tesla #spacex #founders",
+      "date": "Jul 15, 2026",
+      "plays": "172"
     }
   ]
 }

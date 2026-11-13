@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-11-12T14:33:25.784Z",
+  "updatedAt": "2026-11-13T13:52:16.470Z",
   "kpis": {
     "followers": {
-      "value": 7950
+      "value": 7960
     },
     "downloads": {
-      "value": 733
+      "value": 761
     },
     "episodes": {
       "value": 156
@@ -17,15 +17,15 @@
   "youtube": [
     [
       "Subscribers",
-      "7,950"
+      "7,960"
     ],
     [
       "Total views",
-      "368,214"
+      "369,062"
     ],
     [
       "Views (30d)",
-      "733"
+      "761"
     ],
     [
       "Avg. duration",
@@ -33,7 +33,7 @@
     ],
     [
       "Likes (30d)",
-      "24"
+      "30"
     ],
     [
       "Comments (30d)",
@@ -113,7 +113,7 @@
     },
     {
       "month": "Nov '26",
-      "yt": 733,
+      "yt": 761,
       "ap": 0,
       "sp": 0
     }
@@ -122,12 +122,12 @@
     {
       "title": "#105 ​Inside the Underground Meme Marketing World: Jason Levin of Memelord",
       "date": "Jun 16, 2026",
-      "plays": "972"
+      "plays": "975"
     },
     {
       "title": "#106 130 Million Meals made by Robots: Rajat Bhageria of Chef Robotics",
       "date": "Sep 1, 2026",
-      "plays": "640"
+      "plays": "645"
     },
     {
       "title": "Writing the Most Useful Elon Book #bookofelon #elonmusk #elonbook",

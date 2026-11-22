@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-11-21T14:08:09.403Z",
+  "updatedAt": "2026-11-22T13:58:39.783Z",
   "kpis": {
     "followers": {
-      "value": 8050
+      "value": 8060
     },
     "downloads": {
-      "value": 817
+      "value": 813
     },
     "episodes": {
       "value": 156
@@ -17,23 +17,23 @@
   "youtube": [
     [
       "Subscribers",
-      "8,050"
+      "8,060"
     ],
     [
       "Total views",
-      "374,559"
+      "375,161"
     ],
     [
       "Views (30d)",
-      "817"
+      "813"
     ],
     [
       "Avg. duration",
-      "0:26"
+      "0:27"
     ],
     [
       "Likes (30d)",
-      "34"
+      "31"
     ],
     [
       "Comments (30d)",
@@ -113,7 +113,7 @@
     },
     {
       "month": "Nov '26",
-      "yt": 817,
+      "yt": 813,
       "ap": 0,
       "sp": 0
     }
@@ -122,7 +122,7 @@
     {
       "title": "#106 130 Million Meals made by Robots: Rajat Bhageria of Chef Robotics",
       "date": "Sep 1, 2026",
-      "plays": "685"
+      "plays": "692"
     },
     {
       "title": "Writing the Most Useful Elon Book #bookofelon #elonmusk #elonbook",
@@ -132,7 +132,7 @@
     {
       "title": "Elon Thinks Like Both an Engineer and an Economist #elonmusk #tesla #spacex #founders",
       "date": "Jul 15, 2026",
-      "plays": "175"
+      "plays": "176"
     },
     {
       "title": "Elon Musk's Rule: Delete Before You Optimize #elonmusk #engineering #spacex #tesla",

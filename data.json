@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-11-26T16:19:09.214Z",
+  "updatedAt": "2026-11-27T16:03:16.710Z",
   "kpis": {
     "followers": {
-      "value": 8130
+      "value": 8150
     },
     "downloads": {
-      "value": 774
+      "value": 789
     },
     "episodes": {
       "value": 156
@@ -17,23 +17,23 @@
   "youtube": [
     [
       "Subscribers",
-      "8,130"
+      "8,150"
     ],
     [
       "Total views",
-      "377,604"
+      "378,595"
     ],
     [
       "Views (30d)",
-      "774"
+      "789"
     ],
     [
       "Avg. duration",
-      "0:29"
+      "0:28"
     ],
     [
       "Likes (30d)",
-      "27"
+      "29"
     ],
     [
       "Comments (30d)",
@@ -113,7 +113,7 @@
     },
     {
       "month": "Nov '26",
-      "yt": 774,
+      "yt": 789,
       "ap": 0,
       "sp": 0
     }
@@ -132,7 +132,7 @@
     {
       "title": "Elon Thinks Like Both an Engineer and an Economist #elonmusk #tesla #spacex #founders",
       "date": "Jul 15, 2026",
-      "plays": "176"
+      "plays": "178"
     },
     {
       "title": "Elon Musk's Rule: Delete Before You Optimize #elonmusk #engineering #spacex #tesla",

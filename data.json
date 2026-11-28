@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-11-27T16:03:16.710Z",
+  "updatedAt": "2026-11-28T14:58:53.438Z",
   "kpis": {
     "followers": {
-      "value": 8150
+      "value": 8170
     },
     "downloads": {
-      "value": 789
+      "value": 784
     },
     "episodes": {
       "value": 156
@@ -17,19 +17,19 @@
   "youtube": [
     [
       "Subscribers",
-      "8,150"
+      "8,170"
     ],
     [
       "Total views",
-      "378,595"
+      "378,951"
     ],
     [
       "Views (30d)",
-      "789"
+      "784"
     ],
     [
       "Avg. duration",
-      "0:28"
+      "0:29"
     ],
     [
       "Likes (30d)",
@@ -113,16 +113,26 @@
     },
     {
       "month": "Nov '26",
-      "yt": 789,
+      "yt": 784,
       "ap": 0,
       "sp": 0
     }
   ],
   "topEpisodes": [
     {
+      "title": "The Elite Private High School Where Students Earn A Million Dollars: [Nat Eliason of Founder School",
+      "date": "Jun 2, 2026",
+      "plays": "1.3K"
+    },
+    {
+      "title": "#105 ​Inside the Underground Meme Marketing World: Jason Levin of Memelord",
+      "date": "Jun 16, 2026",
+      "plays": "1.0K"
+    },
+    {
       "title": "#106 130 Million Meals made by Robots: Rajat Bhageria of Chef Robotics",
       "date": "Sep 1, 2026",
-      "plays": "702"
+      "plays": "704"
     },
     {
       "title": "Writing the Most Useful Elon Book #bookofelon #elonmusk #elonbook",
@@ -133,16 +143,6 @@
       "title": "Elon Thinks Like Both an Engineer and an Economist #elonmusk #tesla #spacex #founders",
       "date": "Jul 15, 2026",
       "plays": "178"
-    },
-    {
-      "title": "Elon Musk's Rule: Delete Before You Optimize #elonmusk #engineering #spacex #tesla",
-      "date": "Aug 10, 2026",
-      "plays": "174"
-    },
-    {
-      "title": "What Makes Eric Jorgenson's Books Different?",
-      "date": "Sep 24, 2026",
-      "plays": "159"
     }
   ]
 }
